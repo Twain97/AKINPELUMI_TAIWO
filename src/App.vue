@@ -5,14 +5,14 @@
 
       <!-- Menu icon -->
       <div  @click="toggleSideNav2()" 
-      class="md:ml-10">
+      class="md:ml-10 my-auto">
         <font-awesome-icon :icon="['fas', 'bars']"  id="sideNavVisible"
         class="hidden icons menuIcon py-1 px-2 rounded-lg" />
       </div>
 
 
-      <div id="hi" class=" bg-red-500 text-white h-fit my-auto ml-10 w-fit transition-all ease-in duration-500 ">
-        Hi
+      <div id="hi" class=" text-white h-fit my-auto ml-10  w-fit transition-all ease-in duration-500 ">
+        <img :src="logo" alt="logo" class="w-10 h-9"/>
       </div>
 
       </header>
@@ -24,21 +24,23 @@
       <topNav id="topNavVisible" class="hidden transition-all ease-in-out duration-500 xl:ml-24"/>
 
 
-      <div id="hi" class=" bg-red-500 text-white h-fit my-auto ml-10 w-fit transition-all ease-in duration-500 xl:ml-52 ">
-        Hi
+      <div id="hi" class=" text-white h-fit my-auto ml-10 lg:ml-44 w-fit transition-all ease-in duration-500 xl:ml-52 ">
+        <img :src="logo" alt="logo" class="w-10 h-10"/>
       </div>
 
       </header>
 
 
 
-      <home id="home"  @click="closeNav(), closeNav2()" class="mb-5 md:w-full lg:mx-auto lg:border-4 lg:shadow-md py-4 lg:w-4/5 xl:w-3/4 rounded-2xl"/>
+      <home id="home" 
+      
+        class="mb-5 md:w-full lg:mx-auto lg:border-4 lg:shadow-md py-4 lg:w-4/5 xl:w-3/4 rounded-2xl"/>
   </div>
 </template>
 
 <script setup>
+import logo from "@/images/Logo.png"
 import topNav from "@/views/topNav.vue"
-
 import home from "./pages/Home.vue"
 import {useStore} from "vuex"
 import { onMounted } from "vue"
@@ -93,7 +95,7 @@ var ShowSideNav2 = document.getElementById("ShowSideNav2")
   header.style.borderBottom = "3px solid rgb(68, 95, 131)"
   header2.style.backgroundColor = "rgba(31, 41, 55, 0.95)";
   header2.style.borderBottom = "3px solid rgb(68, 95, 131)"
-  hi.style.marginLeft = "75%"
+  hi.style.marginLeft = "70%"
   // Perform actions, such as adding classes, triggering events, etc.
 } else {
   // Div is visible
@@ -102,7 +104,7 @@ var ShowSideNav2 = document.getElementById("ShowSideNav2")
   topNavVisible.style.display = "none"
   sideNavVisible.style.display = "none"
   ShowSideNav2.style.display = "none"
-  hi.style.marginLeft = "1.25rem"
+  hi.style.marginLeft = "2.35rem"
   header.style.backgroundColor = "rgba(31, 41, 55, 0)"
   header.style.borderBottom = "none"
   header2.style.backgroundColor = "rgba(31, 41, 55, 0)"
