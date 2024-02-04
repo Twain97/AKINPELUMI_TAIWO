@@ -2,7 +2,7 @@
   
   <el-menu
     default-active="2"
-    class="el-menu-vertical-demo menu z-50 shadow-xl  shadow-slate-700 top-20 md:top-12 rounded-r-xl space-y-1 "
+    class="el-menu-vertical-demo menu z-40 shadow-xl lg:z-40  shadow-slate-700 top-20  lg:left-32 xl:left-52 md:top-12 rounded-r-xl space-y-1 "
     :collapse="store.state.navToggle"
     :color="color"
   >
@@ -10,7 +10,7 @@
     <el-menu-item index="1" >
       <el-icon :size="size" @click="toggleCollapse">
         <font-awesome-icon icon="house-chimney" size="2xs" 
-         :class="{ 'icons p-2 rounded-xl': isCollapse || !isCollapse }"/>
+         :class="{ 'icons p-2 rounded-xl lg:-ml-44': isCollapse || !isCollapse }"/>
       </el-icon>
       <template #title> 
         <div @click="scrollToHome" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Home </div></div>
@@ -19,7 +19,7 @@
     <el-menu-item index="1">
       <el-icon :size="size" @click="toggleCollapse"> 
         <font-awesome-icon icon="question-circle" size="2xs" 
-         :class="{ 'icons p-2 rounded-xl': isCollapse || !isCollapse }"/>
+         :class="{ 'icons p-2 rounded-xl lg:ml-24': isCollapse || !isCollapse }"/>
       </el-icon>
       <template #title> 
         <div @click="scrollToAbout" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> About Me </div></div>

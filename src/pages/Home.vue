@@ -5,7 +5,7 @@
       <div id="home" class="picTextHlder pb-10 border-red-600 flex flex-col md:flex-row-reverse h-4/5 w-full md:h-ht7  ">
         
         <!-- Image holder -->
-        <div class="image/circle relative mt-8 mx-auto w-80 h-60 overflow-hidden md:my-auto  border-red-600">
+        <div class="image/circle relative mt-8 mx-auto w-80 h-60  lg:w-96 lg:h-72 overflow-hidden md:my-auto  border-red-600">
           <img :src="PortPic" alt="Porfolio pic" class="absolute z-40 h-full opacity-95 ">
          
           <div class="circle absolute h-40 w-40 z-10 right-6 top-6 rounded-full border-r-4 rotate-45"></div>
@@ -27,13 +27,13 @@
           </div>
         </div>
         
-        <div class="texts z-50 flex flex-col -mt-1  mx-auto md:my-auto  border-white md:w-fit md:-mr-20 transition-all ease-in-out">
+        <div class="texts z-30 flex flex-col -mt-1  mx-auto md:my-auto  border-white md:w-fit md:-mr-20 transition-all ease-in-out">
           <div class=" text-center text-slate-50">
-            <h1 class="mx-6 text-3xl font-serif">Hi! I'm <br> Akinpelumi Taiwo</h1>
-            <p  class="mt-2 text-xs text-slate-400 font-salsa">VueJs/Firebase Web developer.</p>
+            <h1 class="mx-6 text-3xl lg:text-4xl font-serif">Hi! I'm <br> Akinpelumi Taiwo</h1>
+            <p  class="mt-2 text-xs xl:text-base text-slate-400 font-salsa">VueJs/Firebase Web developer.</p>
           </div>
           <div class="downloadButton rounded-full mt-5 mx-auto text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
-            <div class="text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm">
+            <div class="text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm lg:text-lg">
               <font-awesome-icon :icon="['fas', 'download']" class="text-lg m-auto"/>
               <p class="m-auto font-serif">Get my Resume</p>
             </div>
@@ -45,12 +45,12 @@
       <div id="about" class="-bottom-3 h-fit  w-full -mt-4 ">
         <div class="my-auto flex  relative">
           <hr class=" w-full absolute top-2/4">
-          <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white ">About Me</div>
+          <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white lg:text-lg ">About Me</div>
         </div>
       </div>
 
       <div class="section px-4  mt-5 ">
-        <p class=" mx-auto font-salsa text-xs md:text-sm">
+        <p class=" mx-auto font-salsa text-xs md:text-sm lg:text-base">
           My name is Akinpelumi Taiwo, i'm a student of Federal Polytechnic Ado Ekiti with discipline in Computer Science.<br/>
         </p>
         <p class=" mx-auto my-2 font-salsa text-xs md:text-sm">
@@ -60,46 +60,46 @@
           What drives my motivation as a web developer is my undying interest of building things that work, solving personal problems as well as those of others brought before me.<br/>
           My interests are in graphic design using photoshop, canva which i do make use of during web development to make them dynamic as well as interactive and i am also proficient with Microsoft Packages(Excel, Ms Word and so on) which helps in keeping and managing of data and records. 
         </p>
-        <div class="px-4 font-salsa w-fit text-xs py-2 rounded-xl mt-10 mb-6 border-2 border-gray-400">
+        <div class="px-4 font-salsa w-fit text-sm  lg:text-base py-2 rounded-xl mt-10 mb-6 border-2 border-gray-400">
           <p>My Stack <font-awesome-icon :icon="['fas', 'code']" size="lg" class=" m-auto ml-4"/> </p>
         </div>
 
         <div class="stackContainer mb-6 ">
           <div class=" flex mt-3 ">
-            <font-awesome-icon  :icon="['fab', 'vuejs']" size="lg" color="white" class="stackIcons p-1 hover:p-2  rounded-lg " />
-            <p class="ml-3 text-xs  md:text-sm"> <span class="text-xl font-serif">Vue Js 3</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
+            <font-awesome-icon  :icon="['fab', 'vuejs']"  color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2  rounded-lg " />
+            <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Vue Js 3</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
           </div>
           <hr class="hr ml-3 -mt-6 w-fit h-20">
 
           <div class=" flex mt-4 ">
-            <font-awesome-icon  :icon="['fas', 'fire-flame-curved']" size="lg" color="white" class="stackIcons p-1 hover:p-2 rounded-lg " />
-            <p class="ml-3 text-xs md:text-sm"><span class="text-xl font-serif">Firebase</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
+            <font-awesome-icon  :icon="['fas', 'fire-flame-curved']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg " />
+            <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Firebase</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
 
           </div>
 
           <hr class="hr ml-3 -mt-7 w-fit h-20">
           <div class=" flex mt-4 ">
-            <font-awesome-icon  :icon="['fas', 'wind']" size="lg" color="white" class="stackIcons mb-3 p-1 hover:p-2 rounded-lg " />
-            <p class="ml-3 text-xs  md:text-sm"><span class="text-xl font-serif">Tailwind Css </span> <br/> Tailwind, its a 'breeze' in styling CSS. This is a CSS framework that combine both HTML and CSS to make good UI designs. It provide responsive class and its highly flexible</p>
+            <font-awesome-icon  :icon="['fas', 'wind']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 mb-3 p-1 hover:p-2 rounded-lg " />
+            <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Tailwind Css </span> <br/> Tailwind, its a 'breeze' in styling CSS. This is a CSS framework that combine both HTML and CSS to make good UI designs. It provide responsive class and its highly flexible</p>
           </div>
 
 
           <div class="flex flex-col space-y-4 mt-6">
             <div class="mx-auto px-2 py-1 rounded-lg bg-blue-200 text-blue-900">
-              <h2 class="font-salsa ">Others</h2>
+              <h2 class="font-salsa text-base lg:text-lg ">Others</h2>
             </div>
 
-            <div class="flex flex-row justify-evenly text-center">
+            <div class="flex flex-row justify-evenly text-center text-base lg:text-lg">
               <div class="flex flex-col h-24 w-20 border-2 border-blue-300 rounded-xl">
-                <font-awesome-icon  :icon="['fab', 'html5']" size="lg" color="white" class="stackIcons m-auto p-1 hover:p-2 rounded-lg w-fit" />
+                <font-awesome-icon  :icon="['fab', 'html5']"  color="white" class="stackIcons text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit" />
                 <p class="mx-auto">HTML 5</p>
               </div>
               <div class="flex flex-col h-24 w-20 border-2 border-blue-300 rounded-xl">
-                <font-awesome-icon  :icon="['fab', 'css3-alt']" size="lg" color="white" class="stackIcons m-auto p-1 hover:p-2 rounded-lg w-fit " />
+                <font-awesome-icon  :icon="['fab', 'css3-alt']" color="white" class="stackIcons  text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit " />
                 <p class="mx-auto">CSS 3</p>
               </div>
               <div class="flex flex-col h-24 w-20  border-2 border-blue-300 rounded-xl">
-                <font-awesome-icon  :icon="['fab', 'js']" size="lg" color="white" class="stackIcons m-auto p-1 hover:p-2 rounded-lg w-fit " />
+                <font-awesome-icon  :icon="['fab', 'js']"  color="white" class="stackIcons text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit " />
                 <p class="mx-auto">JS</p>
               </div>
             </div>
@@ -108,10 +108,10 @@
 
 
         <!-- Recent project section -->
-        <div id="project" class="-bottom-3 h-fit  w-full mb-4 mt-8 ">
+        <div id="project" class="-bottom-3 h-fit  w-full mb-4 mt-12 ">
           <div class="my-auto flex  relative">
             <hr class=" w-full absolute top-2/4 rounded-full">
-            <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white ">Recent Project</div>
+            <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white lg:text-lg ">Recent Project</div>
           </div>
         </div>
 
@@ -120,10 +120,10 @@
                 <template #header>
                     <img alt="knoorPic" :src="knoor" class="rounded-lg mx-auto" />
                 </template>
-                <template #title> <h1 class="font-lemon text-base"><span class="text-orange-500 text-2xl">K</span>noor <span class="text-orange-500 text-2xl">K</span>itchen</h1> </template>
-                <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa">Food Vendor Website</p> </template>
+                <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">K</span>noor <span class="text-orange-500 text-2xl lg:text-3xl">K</span>itchen</h1> </template>
+                <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Food Vendor Website</p> </template>
                 <template #content>
-                    <p class="m-0 font-salsa text-xs ">
+                    <p class="m-0 font-salsa text-xs lg:text-base">
                         Knoor Kitchen is a food vendor website. It is a platform where people can order delicacy of their choice and have it deliver to their doorstep.<br>
                         On it, users are able to create orders, and with payment gateway on it they can make online payment for their order and as well keep track of such order.
                     </p>
@@ -132,7 +132,7 @@
                   <a href="#">
                     <Button icon="pi pi-globe" label="Visit Knoor Kitchen" class="myButton" 
                     :pt="{ 
-                      root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto' } 
+                      root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
                     }"/>
                   </a>
                 </template>
@@ -143,7 +143,7 @@
         <div id="carousel" class="mt-6 h-fit  w-full my-6 ">
           <div class="my-auto flex  relative">
             <hr class=" w-full absolute top-2/4 rounded-full">
-            <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white ">Services Offered</div>
+            <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white lg:text-lg">Services Offered</div>
           </div>
         </div>
 
@@ -179,7 +179,7 @@
         <div id="contact" class="-bottom-3 h-fit  w-full mb-4 mt-10">
           <div class="my-auto flex  relative">
             <hr class=" w-full absolute top-2/4 rounded-full">
-            <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white ">Contact Me</div>
+            <div class="about z-10 p-1 rounded-lg m-auto w-fit font-salsa text-sm text-white lg:text-lg ">Contact Me</div>
           </div>
         </div>
 
@@ -187,21 +187,21 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.777833453944!2d5.300224574088412!3d7.599140909731721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1047e5e70c1d8b79%3A0xb5274cb005995a8e!2sFederal%20Polytechnic%20Ado%20Ekiti!5e0!3m2!1sen!2sng!4v1706490727535!5m2!1sen!2sng" 
           class="w-full h-44 rounded-xl mb-4" style="border:4;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           
-          <div id="details" class="w-full mx-auto my-4 text-sm space-y-2  md:ml-5">
+          <div id="details" class="w-full mx-auto my-4 text-sm lg:text-base space-y-2  md:ml-5">
             <div class="flex flex-row space-x-4 ">
               <div style=" background:rgb(36, 50, 71) ;" class="p-2 rounded-xl  border-red-500">
-                <h3 class=" font-serif">Phone:</h3>
-                <p class="text-xs">08125212907 / 07068858731</p>
+                <h3 class=" font-serif ">Phone:</h3>
+                <p class="text-xs lg:text-sm">08125212907 / 07068858731</p>
               </div>
               <div style=" background:rgb(36, 50, 71) ;" class="p-2 rounded-xl  border-red-500">
                 <h3 class=" font-serif">Address:</h3>
-                <p class="text-xs">Federal Polytechnic Ado-Ekiti</p>
+                <p class="text-xs lg:text-sm">Federal Polytechnic Ado-Ekiti</p>
               </div>
             </div>
 
             <div  id="email" class="w-full p-2 rounded-xl  border-red-500" style=" background:rgb(36, 50, 71) ;">
               <h3 class=" font-serif">Email:</h3>
-                <p class="text-xs break-words">akinpelumi.taiwo97@gmail.com /  sammytwain97@gmail.com</p>
+                <p class="text-xs break-words lg:text-sm">akinpelumi.taiwo97@gmail.com /  sammytwain97@gmail.com</p>
             </div>
           </div>
           
@@ -210,7 +210,7 @@
           <!-- contact me (map and send email section) -->
         <div id="contactMe" class=" mx-auto mt-4 w-full text-sm lg:text-base rounded-lg pt-2 px-2 md:flex md:flex-row" style="background-color:rgb(37, 55, 82);">
           <form action="" class="w-full mx-auto my-4 text-sm space-y-2  md:ml-5 overflow-ellipsis">
-            <p class="text-sm mb-4 font-serif">If you have any project or need help.<br class="md:hidden"/> Contact me</p>
+            <p class="text-sm lg:text-lg mb-4 font-serif">If you have any project or need help.<br class="md:hidden"/> Contact me</p>
             <div class="flex flex-row space-x-2 ">
               <div style=" background:rgb(36, 50, 71) ;" class="p-2 rounded-xl w-2/4 border-red-500">
                 <h3 class=" font-serif">Name:</h3>
@@ -237,7 +237,7 @@
 
             <div class="flex justify-between">
               <div class="downloadButton rounded-full mt-8 h-fit w-fit text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
-                <div class="text-xs space-x-2 py-3 px-2  flex flex-row md:text-sm">
+                <div class="text-xs space-x-2 py-3 px-4  flex flex-row md:text-sm">
                   <font-awesome-icon :icon="['fas', 'paper-plane']" class="text-base m-auto rotate-12"/>
                   <p class="m-auto font-serif">Send</p>
                 </div>

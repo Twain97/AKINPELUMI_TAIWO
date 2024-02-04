@@ -69,6 +69,9 @@ module.exports = {
         serif: 'Young Serif',
         lemon: 'Lemon',
         salsa:'Salsa'
+      },
+      marginLeft:{
+        nml:"-1rem"
       }
     },
   },
