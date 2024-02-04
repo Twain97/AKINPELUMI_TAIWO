@@ -1,11 +1,16 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-    <div class="container w-full h-fit text-slate-50  relative  border-blue-400">
-      <div id="home" class="picTextHlder pb-10 border-red-600 flex flex-col md:flex-row-reverse h-4/5 w-full md:h-ht7  ">
+    <div class=" w-full h-fit pt-0 text-slate-50 relative">
+       <!-- sideNav -->
+    <sideNav id="sideNav" />
+    <!-- sideNav id="sideNav2" -->
+      <sideNav2 id="ShowSideNav2" class="" />
+
+      <div id="home" class="picTextHlder pb-10 border-4 border-red-600 flex flex-col md:flex-row-reverse  w-full md:h-fit md:py-20">
         
         <!-- Image holder -->
-        <div class="image/circle relative mt-8 mx-auto w-80 h-60  lg:w-96 lg:h-72 overflow-hidden md:my-auto  border-red-600">
+        <div class="image/circle relative mt-8 mx-auto w-80 h-60 lg:w-96 lg:h-72 overflow-hidden md:my-auto  border-red-600">
           <img :src="PortPic" alt="Porfolio pic" class="absolute z-40 h-full opacity-95 ">
          
           <div class="circle absolute h-40 w-40 z-10 right-6 top-6 rounded-full border-r-4 rotate-45"></div>
@@ -263,6 +268,8 @@
 </template>
 
 <script setup>
+import sideNav from "../views/sideNav.vue"
+import sideNav2 from "../views/sideNav2.vue"
 import carousel from "../views/carousel.vue"
 import comments from "@/views/comments.vue";
 import PortPic from "../images/pic.png"

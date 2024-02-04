@@ -32,21 +32,13 @@
 
 
 
-    <!-- sideNav -->
-    <sideNav id="sideNav" />
-    <!-- sideNav id="sideNav2" -->
-      <sideNav2 id="ShowSideNav2" class="" />
-
-
-
-      <home id="home"  @click="closeNav(), closeNav2()" class="mb-5 lg:mx-auto lg:border-4 lg:shadow-md py-4 lg:w-4/5 xl:w-3/4 rounded-2xl"/>
+      <home id="home"  @click="closeNav(), closeNav2()" class="mb-5 md:w-full lg:mx-auto lg:border-4 lg:shadow-md py-4 lg:w-4/5 xl:w-3/4 rounded-2xl"/>
   </div>
 </template>
 
 <script setup>
 import topNav from "@/views/topNav.vue"
-import sideNav from "./views/sideNav.vue"
-import sideNav2 from "./views/sideNav2.vue"
+
 import home from "./pages/Home.vue"
 import {useStore} from "vuex"
 import { onMounted } from "vue"
@@ -123,7 +115,7 @@ var ShowSideNav2 = document.getElementById("ShowSideNav2")
 </script>
 
 
-<style scoped>
+<style>
 #home{
   border-color:rgb(52, 76, 112)  ;
 }
