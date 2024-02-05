@@ -53,6 +53,7 @@ import topNav from "@/views/topNav.vue"
 import {useStore} from "vuex"
 import { ref, watch, onMounted  } from "vue"
 
+
 const store = useStore()
 const closeNav = () => store.state.navToggle = true
 
@@ -68,7 +69,6 @@ watch(
 );
 // prevent ShowSideNav2 from showing on loading of page
 onMounted(() => {
-
   var ShowSideNav2 = document.getElementById("ShowSideNav2");
   if (ShowSideNav2) {
     ShowSideNav2.style.display = "none";

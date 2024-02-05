@@ -4,13 +4,18 @@ import client2 from "@/images/clients/client2.jpg"
 import client3 from "@/images/clients/client3.png"
 import client4 from "@/images/clients/client4.jpg"
 import client5 from "@/images/clients/client5.png"
-
 import {signInAnonymously} from "firebase/auth"
 import {auth} from "@/firebase/index.js"
+import {db} from '@/firebase/index.js'
+import{ doc, getDoc, setDoc} from 'firebase/firestore'
 
 const store = createStore({
     state:{
         user:'',
+        commenterName:'',
+        commenterEmail:'',
+        commenterSubject:'',
+        commenterMessage:'',
         signedIn:false,
         navToggle:true,
         navToggle2:true,
@@ -92,7 +97,26 @@ const store = createStore({
             this.state.user = userCredentials.user
             if(userCredentials){
                 console.log("signed in Anonymously")
+               
             }
+
+            // to stop document from being overriden in the database,do the following
+
+            // get firestore document
+            const docSnap = await getDoc(doc(db, 'users', store.state.user.uid))
+            if(docSnap.exists()){
+                console.log("Document Exists")
+            }else{
+                setDoc(doc(db, 'myProjctUsers', store.state.user.uid ),
+                {
+                CommenterName : store.state.commenterName, 
+                CommenterEmail: store.state.commenterEmail,
+                CommenterSubject: store.state.commenterSubject,
+                CommenterMessage: store.state.commenterMessage
+                },
+                { merge:true})
+            }
+
         }catch(error){
             console.log(error.code)
         }

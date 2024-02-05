@@ -215,34 +215,35 @@
 
             <!-- contact me (map and send email section) -->
           <div id="contactMe" class=" mx-auto mt-4 w-full text-sm lg:text-base rounded-lg pt-2 px-2 md:flex md:flex-row" style="background-color:rgb(37, 55, 82);">
-            <form action="" class="w-full mx-auto my-4 text-sm space-y-2  md:ml-5 overflow-ellipsis">
+            <form class="w-full mx-auto my-4 text-sm space-y-2  md:ml-5 overflow-ellipsis">
               <p class="text-sm lg:text-lg mb-4 font-serif">If you have any project or need help.<br class="md:hidden"/> Contact me</p>
               <div class="flex flex-row space-x-2 ">
                 <div style=" background:rgb(36, 50, 71) ;" class="p-2 rounded-xl w-2/4 border-red-500">
                   <h3 class=" font-serif">Name:</h3>
-                  <input type="text" class="bg-inherit text-xs lg:text-sm w-full p-2" placeholder="Adigun Zainab Chibuso">
+                  <input type="text" v-model="name" class="bg-inherit text-xs lg:text-sm w-full p-2" placeholder="Adigun Zainab Chibuso">
                 </div>
                 <div style=" background:rgb(36, 50, 71) ;" class="p-2 rounded-xl w-2/4 border-red-500">
                   <h3 class=" font-serif">Email:</h3>
-                  <input type="text" class="bg-inherit text-xs lg:text-sm w-full p-2 " placeholder="Your_email_address@gmail.com">
+                  <input type="text" v-model="email" class="bg-inherit text-xs lg:text-sm w-full p-2 " placeholder="Your_email_address@gmail.com">
                 </div>
               </div>
 
               <div class="flex flex-col space-y-2">
                 <div  class="w-full p-2 rounded-xl  border-red-500" style=" background:rgb(36, 50, 71) ;">
                   <h3 class=" font-serif">Subject:</h3>
-                  <input type="text" class="bg-inherit text-xs lg:text-sm w-full p-2" placeholder="e.g Landing Page....">
+                  <input type="text" v-model="subject" class="bg-inherit text-xs lg:text-sm w-full p-2" placeholder="e.g Landing Page....">
                 </div>
 
                 <div  class="w-full p-2 rounded-xl  border-red-500" style=" background:rgb(36, 50, 71) ;">
                   <h3 class=" font-serif">Message:</h3>
-                  <textarea class="bg-inherit text-xs lg:text-sm w-full p-2" placeholder="e.g I need you to design a landing page for...."></textarea>
+                  <textarea v-model="message" class="bg-inherit text-xs lg:text-sm w-full p-2" placeholder="e.g I need you to design a landing page for...."></textarea>
                 </div>
               </div>
 
 
               <div class="flex justify-between">
-                <div class="downloadButton rounded-full mt-8 h-fit w-fit text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
+                <div @click="sendMessage()"
+                class="downloadButton rounded-full mt-8 h-fit w-fit text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
                   <div class="text-xs space-x-2 py-3 px-4  flex flex-row md:text-sm">
                     <font-awesome-icon :icon="['fas', 'paper-plane']" class="text-base m-auto rotate-12"/>
                     <p class="m-auto font-serif">Send</p>
@@ -278,11 +279,38 @@ import PortPic from "../images/pic.png"
 import knoor from "../images/knoor.png"
 import whatsapp from "@/images/whatsapp.png"
 import {useStore} from "vuex"
+import { ref } from "vue";
+import {db} from '@/firebase/index.js'
+import{ doc, setDoc} from 'firebase/firestore'
 const store = useStore()
 const closeNav = () => store.state.navToggle = true
 
 const closeNav2 = () => store.state.navToggle2 = true
 
+var name = ref()
+var email = ref()
+var subject = ref()
+var message = ref()
+
+const sendMessage = () =>{
+  setDoc(
+    doc(db, 'users', store.state.user.uid ),
+    {
+    CommenterName : name.value, 
+    CommenterEmail: email.value,
+    CommenterSubject: subject.value,
+    CommenterMessage: message.value
+    },
+    { merge:true}
+  )
+
+    name.value=''
+    email.value=''
+    subject.value=''
+    message.value=''
+
+                
+}
 
 // import { onMounted, ref } from "vue";
 

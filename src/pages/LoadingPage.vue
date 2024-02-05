@@ -20,12 +20,15 @@ import { Vue3Lottie } from 'vue3-lottie'
 import AnimationJSON from '../animation.json'
 import { useStore } from 'vuex'; 
 
+
+
 const store = useStore()
 
 onMounted(() => {
   store.dispatch("signIn")
   setTimeout(() => {
    store.state.signedIn = true
+   
   },5000);
 
   
