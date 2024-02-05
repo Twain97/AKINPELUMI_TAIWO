@@ -5,9 +5,13 @@ import client3 from "@/images/clients/client3.png"
 import client4 from "@/images/clients/client4.jpg"
 import client5 from "@/images/clients/client5.png"
 
+import {signInAnonymously} from "firebase/auth"
+import {auth} from "@/firebase/index.js"
+
 const store = createStore({
     state:{
-        count:0,
+        user:'',
+        signedIn:false,
         navToggle:true,
         navToggle2:true,
         service:[
@@ -61,8 +65,8 @@ const store = createStore({
         ]
     },
     mutations:{
-        increment(state){
-            state.count ++
+        setUser(state, user){
+            state.user = user
         },
         mutateToggle(state){
             state.navToggle = !state.navToggle
@@ -73,12 +77,29 @@ const store = createStore({
     },
     actions:{
         counter: ({commit})=>
-        commit('increment'),
+            commit('increment'),
         toggle: ({commit}) =>
-        commit("mutateToggle"),
+            commit("mutateToggle"),
         toggle2: ({commit}) =>
-        commit("mutateToggle2")
+            commit("mutateToggle2"),
+        
+
+    // users actions
+
+    async signIn(){
+        try{
+            const userCredentials = await signInAnonymously(auth)
+            this.state.user = userCredentials.user
+            if(userCredentials){
+                console.log("signed in Anonymously")
+            }
+        }catch(error){
+            console.log(error.code)
+        }
     }
+
+    },
+
 })
 
 export default store;

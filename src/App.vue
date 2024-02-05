@@ -1,5 +1,6 @@
 <template>
-  <div class="main h-full w-full flex">
+  <div>
+    <div  v-if="signedIn" class="main h-full w-full flex">
      <!-- header small/medium screens -->
      <header id="header" class="fixed z-50 top-0 w-full flex py-2 transition-all ease-in-out delay-150 duration-100 lg:hidden">
 
@@ -32,25 +33,42 @@
 
 
 
-      <home id="home" 
+      <!-- <home id="home" class="mb-5 md:w-full lg:mx-auto lg:border-4 lg:shadow-md py-4 lg:w-4/5 xl:w-3/4 rounded-2xl"/> -->
       
-        class="mb-5 md:w-full lg:mx-auto lg:border-4 lg:shadow-md py-4 lg:w-4/5 xl:w-3/4 rounded-2xl"/>
+      <router-view></router-view>
+  
+  </div>
+
+  <div v-else>
+    <LoadingPage/>
+  </div>
+
   </div>
 </template>
 
 <script setup>
+import LoadingPage from "@/pages/LoadingPage.vue"
 import logo from "@/images/Logo.png"
 import topNav from "@/views/topNav.vue"
-import home from "./pages/Home.vue"
 import {useStore} from "vuex"
-import { onMounted } from "vue"
+import { ref, watch, onMounted  } from "vue"
+
 const store = useStore()
 const closeNav = () => store.state.navToggle = true
 
 const closeNav2 = () => store.state.navToggle2 = true
 
+let signedIn = ref(store.state.signedIn)
+watch(
+  () => store.state.signedIn,
+  (newValue) => {
+    signedIn.value = newValue;
+  },
+  { immediate: true }
+);
 // prevent ShowSideNav2 from showing on loading of page
 onMounted(() => {
+
   var ShowSideNav2 = document.getElementById("ShowSideNav2");
   if (ShowSideNav2) {
     ShowSideNav2.style.display = "none";
