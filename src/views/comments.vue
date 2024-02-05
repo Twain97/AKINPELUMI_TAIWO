@@ -2,8 +2,8 @@
 <template>
     <carousel :items-to-show="1.0"  class="z-10 w-full md:w-full mx-auto bg-inherit transition-all ease-in-out delay-300" 
      :autoplay="0" :wrap-around="true" pagination-color="red" paginationActiveColor="red" >
-      <slide v-for="slide in clientComments" :key="slide" class=" border-red-500">
-        <div id="Carousel" class="h-44 md:h-44 w-5/6 mb-4 lg:h-52 mx-2 overflow-hidden relative text-base lg:text-lg rounded-lg" style="background-color:rgb(37, 55, 82);">
+      <slide v-for="slide in clientComments" :key="slide" class="flex border-red-500">
+        <div id="Carousel" class="mt-4 h-44 md:h-44 w-5/6 mb-4 lg:h-52 mx-2 overflow-hidden relative text-base lg:text-lg rounded-lg" style="background-color:rgb(37, 55, 82);">
           <div class="flex justify-between py-2 px-5">
             <img :src="slide.photo" alt="" class="w-10 h-10 lg:h-20 lg:w-20 bg-white rounded-full">
             <div class="flex flex-col font-salsa">

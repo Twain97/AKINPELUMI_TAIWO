@@ -10,11 +10,6 @@
                     <h1 class=" font-salsa">Welcome! Please wait ...</h1>
                 </div>
             </div>
-            <router-link to="/Home">
-                <div class="h-10 w-10 bg-red-500">
-
-                </div>
-            </router-link>
        </div>
     </div>
 </template>
@@ -49,7 +44,7 @@ onMounted(() => {
   margin: 0 auto; 
   letter-spacing: .15em;
   animation: 
-    typing 2s steps(30, end),
+    typing 1.5s steps(30, end),
     blink-caret .5s step-end infinite;
 }
 
