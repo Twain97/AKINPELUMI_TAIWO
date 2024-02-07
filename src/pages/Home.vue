@@ -1,10 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="absolute justify-center w-full bg-red-600">
-        <Toast position="bottom-center"  class="mb-20 w-full md:w-wd8 lg:w-wd3 xl:w-wd4 px-4" group="bc" @close="onClose"
+  <div class="absolute justify-center w-full">
+        <Toast position="bottom-center"  class="mb-20 w-5/6 md:w-wd8 lg:w-wd3 xl:w-wd4 px-4" group="bc" @close="onClose"
         :pt="{
-          closeButton:{class:'text-slate-800 mt-2 mr-3 '},
+          closeButton:{class:'text-slate-800  ml-3 outline-none '},
           content:{class:'-ml-2'},
           
         }">
@@ -16,7 +16,7 @@
                     </div>
                     <div class="font-semibold text-base md:text-lg text-slate-800 my-3 h-10 w-full">
                       <form class="bg-transparent outline-none text-xs md:text-sm w-full h-full">
-                        <textarea v-model.trim="comment" placeholder="Hi, drop a comment about how you see this project" class="w-full resize-none outline-none h-full bg-transparent"></textarea>
+                        <textarea v-model.trim="comment" placeholder="Hi. For improvement purpose, please drop a comment about this project" class="w-full resize-none outline-none h-full bg-transparent"></textarea>
                       </form>
                     </div>
                     <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
@@ -82,14 +82,14 @@
 
         <div class="section px-4  mt-5 ">
           <p class=" mx-auto font-salsa text-xs md:text-sm lg:text-base">
-            My name is Akinpelumi Taiwo, i'm a student of Federal Polytechnic Ado Ekiti with discipline in Computer Science.<br/>
+            My name is Akinpelumi Taiwo, I'm in the final year of getting my Higher National Diploma from Federal Polytechnic, Ado Ekiti in Computer Science.<br/>
           </p>
           <p class=" mx-auto my-2 font-salsa text-xs md:text-sm">
-            My web development journey started in the year 2019 upon gaining admission into school. I am currently a freelancer and i'm opened for full-time roles(preferably remote).
+            My web development journey started in 2019 upon gaining admission into school. I am currently a freelancer and I'm open to full-time roles (preferably remote).
           </p>
           <p class=" mx-auto font-salsa text-xs md:text-sm">
-            What drives my motivation as a web developer is my undying interest of building things that work, solving personal problems as well as those of others brought before me.<br/>
-            My interests are in graphic design using photoshop, canva which i do make use of during web development to make them dynamic as well as interactive and i am also proficient with Microsoft Packages(Excel, Ms Word and so on) which helps in keeping and managing of data and records. 
+            What drives me as a web developer is my undying interest in building things that work, and solving problems in my daily life as well as those of others around me.<br/>
+            I also have interests in graphic design using Photoshop and Canva which I combine with my web development skills to make the things I build dynamic and interactive. In addition, I am proficient with Microsoft Packages(Excel, MS Word and so on) which helps in keeping and managing data and records. 
           </p>
           <div class="px-4 font-salsa w-fit text-sm  lg:text-base py-2 rounded-xl mt-10 mb-6 border-2 border-gray-400">
             <p>My Stack <font-awesome-icon :icon="['fas', 'code']" size="lg" class=" m-auto ml-4"/> </p>
@@ -383,7 +383,7 @@ setTimeout(() => {
       showTemplate()
      }
      
-    },10000);
+    },20000);
 
 // import { onMounted, ref } from "vue";
 
