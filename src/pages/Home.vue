@@ -30,7 +30,7 @@
        <!-- sideNav -->
     <sideNav id="sideNav" />
     <!-- sideNav id="sideNav2" -->
-      <sideNav2 id="ShowSideNav2" class="" />
+      <sideNav2 id="ShowSideNav2" class="hidden" />
 
       <div  @click="closeNav(), closeNav2()">
         <div id="home" class="picTextHlder pb-10 border-red-600 flex flex-col md:flex-row-reverse  w-full md:h-fit md:py-20">
@@ -383,7 +383,7 @@ setTimeout(() => {
       showTemplate()
      }
      
-    },1000);
+    },10000);
 
 // import { onMounted, ref } from "vue";
 

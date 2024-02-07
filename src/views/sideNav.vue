@@ -2,7 +2,7 @@
   
   <el-menu
     default-active="2"
-    class="el-menu-vertical-demo menu z-50 shadow-xl lg:z-50  shadow-slate-700 top-20 lg:left-7 md:top-12 rounded-r-xl space-y-1 "
+    class="el-menu-vertical-demo menu z-50 shadow-xl  shadow-slate-700 top-16 rounded-r-xl space-y-3 "
     :collapse="store.state.navToggle"
     :color="color"
   >
