@@ -14,9 +14,10 @@
                         <Avatar :image="logo" shape="circle" class="w-10 h-10" />
                         <span class="ml-10 my-auto font-bold text-slate-800">Akinplumi Taiwo</span>
                     </div>
-                    <div class="font-semibold text-base md:text-lg text-slate-800 my-3 h-10 w-full">
+                    <div class="font-semibold text-base md:text-lg text-slate-600 my-3 h-20w-full">
                       <form class="bg-transparent outline-none text-xs md:text-sm w-full h-full">
-                        <textarea v-model.trim="comment" placeholder="Hi. For improvement purpose, please drop a comment about this project" class="w-full resize-none outline-none h-full bg-transparent"></textarea>
+                        <p class="text-900">For improvement purpose, please drop a review about this project</p>
+                        <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 text-black w-full resize-none outline-none h-4 bg-transparent"></textarea>
                       </form>
                     </div>
                     <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
