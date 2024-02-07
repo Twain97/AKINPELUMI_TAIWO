@@ -1,5 +1,21 @@
 <template>
   <div>
+    <!-- Toast alert -->
+    <div class="">
+      <Toast class="hidden md:block w-2/4"
+        :pt="{
+          icon:{class:'mx-5 w-8 mt-3'},
+        }"/>
+        <Toast class="w-3/4 text-xs font-extralight md:hidden"
+        :pt="{
+          icon:{class:'mx-2 w-5 '},
+        }"
+        />
+    </div>
+    
+    <!-- End of Toast -->
+
+
     <div  v-if="signedIn" class="main h-full w-full flex">
      <!-- header small/medium screens -->
      <header id="header" class="fixed z-50 top-0 w-full flex py-2 transition-all ease-in-out delay-150 duration-100 lg:hidden">

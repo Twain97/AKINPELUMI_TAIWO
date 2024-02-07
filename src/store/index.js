@@ -107,7 +107,7 @@ const store = createStore({
             if(docSnap.exists()){
                 console.log("Document Exists")
             }else{
-                setDoc(doc(db, 'myProjctUsers', store.state.user.uid ),
+                setDoc(doc(db, 'myProjectUsers', store.state.user.uid ),
                 {
                 CommenterName : store.state.commenterName, 
                 CommenterEmail: store.state.commenterEmail,

@@ -1,6 +1,31 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <div class="absolute justify-center w-full bg-red-600">
+        <Toast position="bottom-center"  class="mb-20 w-full md:w-wd8 lg:w-wd3 xl:w-wd4 px-4" group="bc" @close="onClose"
+        :pt="{
+          closeButton:{class:'text-slate-800 mt-2 mr-3 '},
+          content:{class:'-ml-2'},
+          
+        }">
+            <template #message>
+                <div class="w-full m-auto flex flex-col items-start rounded-lg pl-4  flex-1 border-l-8 border-slate-700 ">
+                    <div class="flex w-70 font-salsa">
+                        <Avatar :image="logo" shape="circle" class="w-10 h-10" />
+                        <span class="ml-10 my-auto font-bold text-slate-800">Akinplumi Taiwo</span>
+                    </div>
+                    <div class="font-semibold text-base md:text-lg text-slate-800 my-3 h-10 w-full">
+                      <form class="bg-transparent outline-none text-xs md:text-sm w-full h-full">
+                        <textarea v-model.trim="comment" placeholder="Hi, drop a comment about how you see this project" class="w-full resize-none outline-none h-full bg-transparent"></textarea>
+                      </form>
+                    </div>
+                    <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
+                </div>
+            </template>
+        </Toast>
+    </div>
+
+
     <div class=" w-full h-fit pt-0 text-slate-50 relative">
        <!-- sideNav -->
     <sideNav id="sideNav" />
@@ -271,6 +296,7 @@
 </template>
 
 <script setup>
+import logo from "../images/Logo.png"
 import sideNav from "../views/sideNav.vue"
 import sideNav2 from "../views/sideNav2.vue"
 import carousel from "../views/carousel.vue"
@@ -279,9 +305,17 @@ import PortPic from "../images/pic.png"
 import knoor from "../images/knoor.png"
 import whatsapp from "@/images/whatsapp.png"
 import {useStore} from "vuex"
-import { ref } from "vue";
+// import { ref } from "vue";
 import {db} from '@/firebase/index.js'
 import{ doc, setDoc} from 'firebase/firestore'
+import { useToast } from "primevue/usetoast";
+import { ref } from 'vue';
+const toast = useToast();
+const visible = ref(false);
+
+const comment = ref()
+
+
 const store = useStore()
 const closeNav = () => store.state.navToggle = true
 
@@ -292,9 +326,34 @@ var email = ref()
 var subject = ref()
 var message = ref()
 
+const showTemplate = () => {
+    if (!visible.value) {
+        toast.add({ severity: 'success', summary: 'Can you send me the report?', group: 'bc' });
+        visible.value = true;
+    } 
+};
+
+const onReply = () => {
+  
+    if(comment.value){
+      // alert("Not Empty")
+      toast.removeGroup('bc');
+      setDoc(doc(db, 'myProjectUsers', store.state.user.uid ), {Comment : comment.value, }, { merge:true}),
+      toast.add({ severity: 'success', summary: 'Success Message', detail: 'Comment sent successfully', life: 3000 });
+      visible.value = false;
+    }else{
+      toast.add({ severity: 'error', summary: 'Empty Input', detail: 'Please fill in the input!', life: 3000 });
+      // alert("Empty")
+    }
+}
+
+const onClose = () => {
+    visible.value = false;
+}
 const sendMessage = () =>{
-  setDoc(
-    doc(db, 'users', store.state.user.uid ),
+  if(name.value && email.value && subject.value &&message.value){
+    setDoc(
+    doc(db, 'myProjectUsers', store.state.user.uid ),
     {
     CommenterName : name.value, 
     CommenterEmail: email.value,
@@ -309,8 +368,22 @@ const sendMessage = () =>{
     subject.value=''
     message.value=''
 
-                
+    toast.add({ severity: 'success', summary: 'Message Sent!', detail: 'You will get a reply in your Email Address', life: 3000 });
+  }else{
+    toast.add({ severity: 'error', summary: 'Empty Input!', detail: 'An input is Empty! Please fill it', life: 3000 });
+  }
+  
 }
+
+
+setTimeout(() => {
+    
+    //  store.state.signedIn = true
+     if(store.state.signedIn){
+      showTemplate()
+     }
+     
+    },1000);
 
 // import { onMounted, ref } from "vue";
 

@@ -6,9 +6,12 @@ import store from "@/store/index.js"
 import PrimeVue from 'primevue/config';
 import "primevue/resources/themes/lara-light-indigo/theme.css";
 import Vue3Lottie from 'vue3-lottie'
+import Toast from 'primevue/toast';
+import ToastService from 'primevue/toastservice';
 import Button from "primevue/button"
 import Card from 'primevue/card';
 import Carousel from 'primevue/carousel';
+import Avatar from 'primevue/avatar';
 import Divider from "primevue/divider"
 import 'primeicons/primeicons.css'
 import 'primevue/resources/themes/lara-light-green/theme.css'
@@ -44,6 +47,9 @@ app.use(store)
 app.use(PrimeVue, { 
   unstyled: false
 });
+app.use(ToastService);
+app.component('Toast',Toast);
+app.component('Avatar', Avatar)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('Divider', Divider)
 app.component('Button', Button);

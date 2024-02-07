@@ -1,5 +1,7 @@
 <template>
-    <div class="flex flex-col w-full h-screen bg-inherit border-4 border-500">
+  
+
+    <div class="flex flex-col w-full h-screen bg-inherit">
        <div class="m-auto w-fit">
             <div class="">
                 <Vue3Lottie class="lg:hidden" :animationData="AnimationJSON" :height="150" :width="150" />
@@ -11,6 +13,7 @@
                 </div>
             </div>
        </div>
+        
     </div>
 </template>
 
@@ -21,12 +24,12 @@ import AnimationJSON from '../animation.json'
 import { useStore } from 'vuex'; 
 
 
-
 const store = useStore()
 
 onMounted(() => {
   store.dispatch("signIn")
   setTimeout(() => {
+    
    store.state.signedIn = true
    
   },5000);
