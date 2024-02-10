@@ -65,7 +65,7 @@ const store = createStore({
                 photo:client5,
                 name:"Kenethy01",
                 job:"Unknown", 
-                comment:"Thanks for helping me out on my project. I'm really looking forward to working with you more and learn as well."
+                comment:"Thanks for helping me out on my project. I'm looking forward to working more with you and learn as well."
             },
         ]
     },

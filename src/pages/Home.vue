@@ -351,7 +351,7 @@ const downloadPdf = async()=>{
     axios
         .get(getlink, {responseType: 'blob'})
         .then(response => {
-            saveAs(response.data, 'AkinpelumiTaiwoCv.pdf');
+            saveAs(response.data, 'Akinpelumi Taiwo resume.pdf');
         })
     // when clicked on, create a tag with its own click function to download the file
     // const link = document.createElement('a');
@@ -468,19 +468,19 @@ hr{
   border-right: 3px solid rgb(68, 95, 131);
   border-top: 3px solid rgb(68, 95, 131);
   -webkit-animation: spin 5.5s linear infinite;
-  animation: spin 5.5s linear infinite;
+  animation: spin 6.1s linear infinite;
 }
 .circleOut{
   border-right: 0.5px solid rgb(68, 95, 131);
   border-top: 0.5px solid rgb(68, 95, 131);
   -webkit-animation: spin 6.5s linear infinite;
-  animation: spin 6.5s linear infinite;
+  animation: spin 7.5s linear infinite;
 }
 .circleIn{
   border-right: 0.5px solid rgb(68, 95, 131);
   border-top: 0.5px solid rgb(68, 95, 131);
   -webkit-animation: spin 4.5s linear infinite;
-  animation: spin 4.5s linear infinite;
+  animation: spin 4.4s linear infinite;
 }
  .icon{
   color:rgb(194, 208, 233);
