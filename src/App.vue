@@ -67,7 +67,7 @@ import LoadingPage from "@/pages/LoadingPage.vue"
 import logo from "@/images/Logo.png"
 import topNav from "@/views/topNav.vue"
 import {useStore} from "vuex"
-import { ref, watch, onMounted  } from "vue"
+import { ref, watch } from "vue"
 
 
 const store = useStore()
@@ -83,13 +83,7 @@ watch(
   },
   { immediate: true }
 );
-// prevent ShowSideNav2 from showing on loading of page
-onMounted(() => {
-  var ShowSideNav2 = document.getElementById("ShowSideNav2");
-  if (ShowSideNav2) {
-    ShowSideNav2.style.display = "none";
-  }
-});
+
 
 const toggleSideNav2 = ()=> {
 var ShowSideNav2 = document.getElementById("ShowSideNav2")

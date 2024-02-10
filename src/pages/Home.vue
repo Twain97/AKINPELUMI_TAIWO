@@ -31,7 +31,7 @@
        <!-- sideNav -->
     <sideNav id="sideNav" />
     <!-- sideNav id="sideNav2" -->
-      <sideNav2 id="ShowSideNav2" class="hidden" />
+      <sideNav2 id="ShowSideNav2" class="" />
 
       <div  @click="closeNav(), closeNav2()">
         <div id="home" class="picTextHlder pb-10 border-red-600 flex flex-col md:flex-row-reverse  w-full md:h-fit md:py-20">
@@ -313,6 +313,8 @@ import{ doc, setDoc} from 'firebase/firestore'
 import { useToast } from "primevue/usetoast";
 import axios from 'axios'
 import {saveAs} from 'file-saver';
+import {onMounted} from "vue"
+
 
 
 const toast = useToast();
@@ -330,6 +332,14 @@ var name = ref()
 var email = ref()
 var subject = ref()
 var message = ref()
+
+// prevent ShowSideNav2 from showing on loading of page
+onMounted(() => {
+  var ShowSideNav2 = document.getElementById("ShowSideNav2");
+  if (ShowSideNav2) {
+    ShowSideNav2.style.display = "none";
+  }
+});
 
 
 // download pdf function
