@@ -65,7 +65,7 @@
               <p  class="mt-2 text-xs xl:text-base text-slate-400 font-salsa">VueJs/Firebase Web developer.</p>
             </div>
             <div class="downloadButton rounded-full mt-5 mx-auto text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
-              <div class="text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm lg:text-lg">
+              <div @click="downloadPdf()" class="text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm lg:text-lg">
                 <font-awesome-icon :icon="['fas', 'download']" class="text-lg m-auto"/>
                 <p class="m-auto font-serif">Get my Resume</p>
               </div>
@@ -308,14 +308,18 @@ import whatsapp from "@/images/whatsapp.png"
 import {useStore} from "vuex"
 // import { ref } from "vue";
 import {db} from '@/firebase/index.js'
+import {getStorage, ref, getDownloadURL} from "firebase/storage"
 import{ doc, setDoc} from 'firebase/firestore'
 import { useToast } from "primevue/usetoast";
-import { ref } from 'vue';
+import axios from 'axios'
+import {saveAs} from 'file-saver';
+
+
 const toast = useToast();
 const visible = ref(false);
-
 const comment = ref()
-
+const storage = getStorage()
+const starsRef = ref(storage, 'gs://vstore-bb580.appspot.com/Akinpelumi Taiwo CV.pdf');
 
 const store = useStore()
 const closeNav = () => store.state.navToggle = true
@@ -327,6 +331,34 @@ var email = ref()
 var subject = ref()
 var message = ref()
 
+
+// download pdf function
+const downloadPdf = async()=>{
+  try{
+    const getlink = await getDownloadURL(starsRef)
+   
+    // before proceeding make sure you enable the cors on cloud console
+    axios
+        .get(getlink, {responseType: 'blob'})
+        .then(response => {
+            saveAs(response.data, 'AkinpelumiTaiwoCv.pdf');
+        })
+    // when clicked on, create a tag with its own click function to download the file
+    // const link = document.createElement('a');
+    // link.href = getlink
+    // link.download
+    // link.click().prevent
+
+    // window.open(getlink,'_download' )
+
+      
+  }catch(error){
+    console.log("error downloading pdf", error)
+  }
+}
+
+
+// show comment box as prompt
 const showTemplate = () => {
     if (!visible.value) {
         toast.add({ severity: 'success', summary: 'Can you send me the report?', group: 'bc' });
@@ -384,7 +416,7 @@ setTimeout(() => {
       showTemplate()
      }
      
-    },20000);
+    },30000);
 
 // import { onMounted, ref } from "vue";
 

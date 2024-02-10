@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import "firebase/firestore";
-import { getFirestore } from "firebase/firestore";
+import "firebase/storage"
+import { getFirestore} from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 import {getAuth} from "firebase/auth"
 const firebaseConfig = {
   apiKey: "AIzaSyC6dGq3WRklhoroUTY1UcXMtubcQjknfOU",
@@ -15,6 +17,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
+// link the app to the storage
+const storage = getStorage(app, "gs://vstore-bb580.appspot.com")
 const db = getFirestore(app)
 
-export {auth, db}
+export {auth, db, storage}
