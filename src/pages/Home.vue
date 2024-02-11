@@ -48,16 +48,24 @@
             
             
             <div class="socialIcons absolute z-50 top-3 right-20">
+              <a href="https://wa.me/+2347068858731">
               <font-awesome-icon  :icon="['fab', 'whatsapp']" color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              </a>
             </div>
             <div class="socialIcons absolute z-50 top-12 right-6">
-              <font-awesome-icon  :icon="['fab', 'twitter']" size="sm" color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              <a href="https://twitter.com/mrTwain97">
+                <font-awesome-icon  :icon="['fab', 'twitter']" size="sm" color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              </a>
             </div>
             <div class="socialIcons absolute z-50 right-4 top-28">
-              <font-awesome-icon :icon="['fab', 'facebook']"  color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              <a href="https://facebook.com/profile.php?id=100067288329413">
+                <font-awesome-icon :icon="['fab', 'facebook']"  color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              </a>
             </div>
             <div class="socialIcons absolute z-50 right-14 top-40">
-              <font-awesome-icon :icon="['fab', 'linkedin']"  color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              <a href="www.linkedin.com/in/akinpelumi-taiwo-67a679232">
+                <font-awesome-icon :icon="['fab', 'linkedin']"  color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
+              </a>
             </div>
           </div>
           
@@ -275,7 +283,7 @@
                   </div>
                 </div>
 
-                <a href="#" class="my-auto pt-5">
+                <a href="https://wa.me/+2347068858731" class="my-auto pt-5">
                   <img :src="whatsapp" alt="whatsapp logo" class="w-16 h-16 hover:opacity-80 rounded-full">
                 </a>
               </div>
