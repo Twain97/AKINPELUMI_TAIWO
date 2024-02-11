@@ -2,22 +2,22 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="absolute justify-center w-full">
-        <Toast position="bottom-center"  class="mb-20 w-5/6 md:w-wd8 lg:w-wd3 xl:w-wd4 px-4" group="bc" @close="onClose"
+        <Toast position="bottom-center"  class="mb-20 w-full md:w-wd8 lg:w-wd3 xl:w-wd4 px-4" group="bc" @close="onClose"
         :pt="{
           closeButton:{class:'text-slate-800  ml-3 outline-none '},
           content:{class:'-ml-2'},
           
         }">
             <template #message>
-                <div class="w-full m-auto flex flex-col items-start rounded-lg pl-4  flex-1 border-l-8 border-slate-700 ">
-                    <div class="flex w-70 font-salsa">
+                <div class="w-full m-auto relative flex flex-col items-start rounded-lg pl-4  flex-1 border-l-8 border-slate-700 ">
+                    <div class="flex -ml-4 w-full md:w-70 font-salsa">
                         <Avatar :image="logo" shape="circle" class="w-10 h-10" />
-                        <span class="ml-10 my-auto font-bold text-slate-800">Akinplumi Taiwo</span>
+                        <span class="ml-0 md:ml-10  my-auto font-bold text-slate-800">Akinplumi Taiwo</span>
                     </div>
-                    <div class="font-semibold text-base md:text-lg text-slate-600 my-3 h-20w-full">
-                      <form class="bg-transparent outline-none text-xs md:text-sm w-full h-full">
+                    <div class="font-semibold text-base h-fit md:text-lg text-slate-600 my-3  w-full">
+                      <form class="bg-transparent outline-none text-xs md:text-sm w-full">
                         <p class="text-900">For improvement purpose, please drop a review about this project</p>
-                        <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 text-black w-full resize-none outline-none h-4 bg-transparent"></textarea>
+                        <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 text-black w-full resize-none outline-none h-10 indent-2 bg-transparent"></textarea>
                       </form>
                     </div>
                     <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
@@ -26,6 +26,8 @@
         </Toast>
     </div>
 
+
+    
 
     <div class=" w-full h-fit pt-0 text-slate-50 relative">
        <!-- sideNav -->
@@ -64,12 +66,7 @@
               <h1 class="mx-6 text-3xl lg:text-4xl font-serif">Hi! I'm <br> Akinpelumi Taiwo</h1>
               <p  class="mt-2 text-xs xl:text-base text-slate-400 font-salsa">VueJs/Firebase Web developer.</p>
             </div>
-            <div class="downloadButton rounded-full mt-5 mx-auto text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
-              <div @click="downloadPdf()" class="text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm lg:text-lg">
-                <font-awesome-icon :icon="['fas', 'download']" class="text-lg m-auto"/>
-                <p class="m-auto font-serif">Get my Resume</p>
-              </div>
-            </div>
+            <DownloadBtn/>
           </div>
         </div>
         
@@ -301,27 +298,26 @@ import logo from "../images/Logo.png"
 import sideNav from "../views/sideNav.vue"
 import sideNav2 from "../views/sideNav2.vue"
 import carousel from "../views/carousel.vue"
+import DownloadBtn from "@/views/downloadBtn.vue"
 import comments from "@/views/comments.vue";
 import PortPic from "../images/pic.png"
 import knoor from "../images/knoor.png"
 import whatsapp from "@/images/whatsapp.png"
 import {useStore} from "vuex"
-// import { ref } from "vue";
+import { ref } from "vue";
 import {db} from '@/firebase/index.js'
-import {getStorage, ref, getDownloadURL} from "firebase/storage"
+
 import{ doc, setDoc} from 'firebase/firestore'
 import { useToast } from "primevue/usetoast";
-import axios from 'axios'
-import {saveAs} from 'file-saver';
 import {onMounted} from "vue"
 
 
 
+
+
 const toast = useToast();
-const visible = ref(false);
+var visible = ref(false);
 const comment = ref()
-const storage = getStorage()
-const starsRef = ref(storage, 'gs://vstore-bb580.appspot.com/Akinpelumi Taiwo CV.pdf');
 
 const store = useStore()
 const closeNav = () => store.state.navToggle = true
@@ -340,33 +336,6 @@ onMounted(() => {
     ShowSideNav2.style.display = "none";
   }
 });
-
-
-// download pdf function
-const downloadPdf = async()=>{
-  try{
-    const getlink = await getDownloadURL(starsRef)
-   
-    // before proceeding make sure you enable the cors on cloud console
-    axios
-        .get(getlink, {responseType: 'blob'})
-        .then(response => {
-            saveAs(response.data, 'Akinpelumi Taiwo resume.pdf');
-        })
-    // when clicked on, create a tag with its own click function to download the file
-    // const link = document.createElement('a');
-    // link.href = getlink
-    // link.download
-    // link.click().prevent
-
-    // window.open(getlink,'_download' )
-
-      
-  }catch(error){
-    console.log("error downloading pdf", error)
-  }
-}
-
 
 // show comment box as prompt
 const showTemplate = () => {

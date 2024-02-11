@@ -13,6 +13,7 @@ import Card from 'primevue/card';
 import Carousel from 'primevue/carousel';
 import Avatar from 'primevue/avatar';
 import Divider from "primevue/divider"
+import ProgressBar from 'primevue/progressbar';
 import 'primeicons/primeicons.css'
 import 'primevue/resources/themes/lara-light-green/theme.css'
 
@@ -53,6 +54,7 @@ app.component('Avatar', Avatar)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.component('Divider', Divider)
 app.component('Button', Button);
+app.component('ProgressBar',ProgressBar)
 app.component('Card', Card)
 app.component('Carousel', Carousel)
 app.use(ElementPlus)
