@@ -66,7 +66,9 @@
               <h1 class="mx-6 text-3xl lg:text-4xl font-serif">Hi! I'm <br> Akinpelumi Taiwo</h1>
               <p  class="mt-2 text-xs xl:text-base text-slate-400 font-salsa">VueJs/Firebase Web developer.</p>
             </div>
+
             <DownloadBtn/>
+            
           </div>
         </div>
         
