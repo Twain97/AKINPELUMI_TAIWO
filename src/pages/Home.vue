@@ -112,7 +112,7 @@
 
             <div class=" flex mt-4 ">
               <font-awesome-icon  :icon="['fas', 'fire-flame-curved']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg " />
-              <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Firebase</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
+              <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Firebase</span> <br/>This is a development platform from Google which handles the backend of mobile and web apps. It offers built-in security for your data and it is easy to integrate.</p>
 
             </div>
 
