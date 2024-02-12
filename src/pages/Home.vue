@@ -168,7 +168,7 @@
                       </p>
                   </template>
                   <template #footer>
-                    <a href="#">
+                    <a href="https://twain97.github.io/knoor/">
                       <Button icon="pi pi-globe" label="Visit Knoor Kitchen" class="myButton" 
                       :pt="{ 
                         root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
