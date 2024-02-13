@@ -12,7 +12,7 @@
                 <div class="w-full m-auto relative flex flex-col items-start rounded-lg pl-4  flex-1 border-l-8 border-slate-700 ">
                     <div class="flex -ml-4 w-full md:w-70 font-salsa">
                         <Avatar :image="logo" shape="circle" class="w-10 h-10" />
-                        <span class="ml-0 md:ml-10  my-auto font-bold text-slate-800">Akinplumi Taiwo</span>
+                        <span class="ml-0 md:ml-10  my-auto font-bold text-slate-800">Akinpelumi Taiwo</span>
                     </div>
                     <div class="font-semibold text-base h-fit md:text-lg text-slate-600 my-3  w-full">
                       <form class="bg-transparent outline-none text-xs md:text-sm w-full">
