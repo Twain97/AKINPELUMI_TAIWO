@@ -108,7 +108,7 @@
               <font-awesome-icon  :icon="['fab', 'vuejs']"  color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2  rounded-lg " />
               <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Vue Js 3</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
             </div>
-            <hr class="hr ml-3 -mt-6 w-fit h-20">
+            <hr class="hr ml-3 -mt-6 lg:-mt-2 w-fit h-20">
 
             <div class=" flex mt-4 ">
               <font-awesome-icon  :icon="['fas', 'fire-flame-curved']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg " />
@@ -116,7 +116,7 @@
 
             </div>
 
-            <hr class="hr ml-3 -mt-7 w-fit h-20">
+            <hr class="hr ml-3 -mt-7 lg:-mt-2 w-fit h-20">
             <div class=" flex mt-4 ">
               <font-awesome-icon  :icon="['fas', 'wind']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 mb-3 p-1 hover:p-2 rounded-lg " />
               <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Tailwind Css </span> <br/> Tailwind, its a 'breeze' in styling CSS. This is a CSS framework that combine both HTML and CSS to make good UI designs. It provide responsive class and its highly flexible</p>
