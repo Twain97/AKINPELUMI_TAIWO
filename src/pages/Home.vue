@@ -177,6 +177,30 @@
                   </template>
               </Card>
           </div>
+          <div class="card mt-4 flex items-center justify-center">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="E-map" src="/E-map.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">E-map</span></h1> </template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Federal Polytechnic Ado school Map.</p> </template>
+                  <template #content>
+                      <p class="m-0 font-salsa text-xs lg:text-base">
+                          E-map is a detailed map of Federal Polytechnic Ado Ekiti.<br>
+                          This map is designed to aid the students, lecturers as well as visitors to locate their destinations and well as key buildings in and around the school.
+                      </p>
+                  </template>
+                  <template #footer>
+                    <a href="https://twain97.github.io/introToMap/">
+                      <Button icon="pi pi-globe" label="Visit E-MAP" class="myButton" 
+                      :pt="{ 
+                        root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                      }"/>
+                    </a>
+                  </template>
+              </Card>
+          </div>
+
 
           <!-- service offered section -->
           <div id="carousel" class="mt-6 h-fit  w-full my-6 ">
