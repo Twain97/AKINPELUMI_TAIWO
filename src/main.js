@@ -19,7 +19,7 @@ import 'primevue/resources/themes/lara-light-green/theme.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faFacebook, faLinkedin, faTwitter, faVuejs, faWhatsapp, faHtml5, faCss3Alt, faJs} from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faLinkedin, faTwitter, faVuejs, faNodeJs, faWhatsapp, faHtml5, faCss3Alt, faJs, faEnvira} from '@fortawesome/free-brands-svg-icons'
 import { faCode, faPhone, faHouseChimney, faQuestionCircle, faUserSecret, faDownload, faBars, faGlobe,
          faUsersViewfinder, faPalette, faAnglesRight, faHandshakeAngle, faClockRotateLeft, faFireFlameCurved,
         faWind,faPaperPlane} from '@fortawesome/free-solid-svg-icons'
@@ -34,7 +34,7 @@ import { faStar } from '@fortawesome/free-regular-svg-icons';
 library.add(faUserSecret, faTwitter, faHouseChimney, faQuestionCircle
   ,faCode, faPhone, faWhatsapp, faFacebook, faLinkedin, faDownload,faBars,faGlobe,
   faUsersViewfinder, faPalette, faStar,faAnglesRight, faHandshakeAngle, faClockRotateLeft, faVuejs,
-  faFireFlameCurved, faWind, faHtml5, faCss3Alt, faJs, faPaperPlane)
+  faFireFlameCurved, faWind, faHtml5, faCss3Alt, faJs, faPaperPlane, faNodeJs, faEnvira )
 
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {

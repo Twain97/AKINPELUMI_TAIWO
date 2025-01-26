@@ -17,7 +17,7 @@
                     <div class="font-semibold text-base h-fit md:text-lg text-slate-600 my-3  w-full">
                       <form class="bg-transparent outline-none text-xs md:text-sm w-full">
                         <p class="text-900">For improvement purpose, please drop a review about this project</p>
-                        <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 text-black w-full resize-none outline-none h-10 indent-2 bg-transparent"></textarea>
+                        <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 border border-slate-600 rounded-lg pt-1  text-black w-full resize-none outline-none h-20 indent-2 bg-transparent"></textarea>
                       </form>
                     </div>
                     <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
@@ -35,7 +35,7 @@
     <!-- sideNav id="sideNav2" -->
       <sideNav2 id="ShowSideNav2" class="" />
 
-      <div  @click="closeNav(), closeNav2()">
+      <div @click="closeNav(), closeNav2()" class=" mb-10">
         <div id="home" class="picTextHlder pb-10 border-red-600 flex flex-col md:flex-row-reverse  w-full md:h-fit md:py-20">
           
           <!-- Image holder -->
@@ -88,62 +88,97 @@
           </div>
         </div>
 
-        <div class="section px-4  mt-5 ">
-          <p class=" mx-auto font-salsa text-xs md:text-sm lg:text-base">
-            My name is Akinpelumi Taiwo, I'm in the final year of getting my Higher National Diploma from Federal Polytechnic, Ado Ekiti in Computer Science.<br/>
-          </p>
-          <p class=" mx-auto my-2 font-salsa text-xs md:text-sm">
-            My web development journey started in 2019 upon gaining admission into school. I am currently a freelancer and I'm open to full-time roles (preferably remote).
-          </p>
-          <p class=" mx-auto font-salsa text-xs md:text-sm">
-            What drives me as a web developer is my undying interest in building things that work, and solving problems in my daily life as well as those of others around me.<br/>
-            I also have interests in graphic design using Photoshop and Canva which I combine with my web development skills to make the things I build dynamic and interactive. In addition, I am proficient with Microsoft Packages(Excel, MS Word and so on) which helps in keeping and managing data and records. 
-          </p>
-          <div class="px-4 font-salsa w-fit text-sm  lg:text-base py-2 rounded-xl mt-10 mb-6 border-2 border-gray-400">
-            <p>My Stack <font-awesome-icon :icon="['fas', 'code']" size="lg" class=" m-auto ml-4"/> </p>
-          </div>
+        <div class="section px-4  mt-5">
+          <div class="md:mx-10 lg:mx-20  ">
+            <p class=" mx-auto font-salsa text-xs md:text-sm lg:text-base">
+              My name is Akinpelumi Taiwo, I'm a Higher National Diploma (H.N.D) graduate of Federal Polytechnic, Ado Ekiti with discipline 
+              in Computer Science.<br/>
+            </p>
+            <p class=" mx-auto my-2 font-salsa text-xs md:text-sm">
+              My web development journey started in 2019 upon gaining admission into school. I am currently a freelancer and I'm open for both part-time and full-time roles.
 
-          <div class="stackContainer mb-6 ">
-            <div class=" flex mt-3 ">
-              <font-awesome-icon  :icon="['fab', 'vuejs']"  color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2  rounded-lg " />
-              <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Vue Js 3</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
-            </div>
-            <hr class="hr ml-3 -mt-6 lg:-mt-2 w-fit h-20">
-
-            <div class=" flex mt-4 ">
-              <font-awesome-icon  :icon="['fas', 'fire-flame-curved']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg " />
-              <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Firebase</span> <br/>This is a development platform from Google which handles the backend of mobile and web apps. It offers built-in security for your data and it is easy to integrate.</p>
-
+            </p>
+            <p class=" mx-auto font-salsa text-xs md:text-sm">
+              What drives me as a web developer is my undying interest in building things that work, and solving problems in my daily life as well as those of others around me.
+              This keen interest has made me learnt and worked on both back-end development as well as front-end development.
+              <br/>
+              I also have interests in graphic design using Photoshop and Canva which I combine with my web development skills to make the things I build dynamic and user friendly websites.
+              In addition, I am proficient with Microsoft Packages(Excel, MS Word and so on) which helps in keeping and managing data and records. 
+            </p>
+            <div class="px-4 font-salsa w-fit text-sm  lg:text-base py-2 rounded-xl mt-10 mb-6 border-2 border-gray-400">
+              <p>My Stack <font-awesome-icon :icon="['fas', 'code']" size="lg" class=" m-auto ml-4"/> </p>
             </div>
 
-            <hr class="hr ml-3 -mt-7 lg:-mt-2 w-fit h-20">
-            <div class=" flex mt-4 ">
-              <font-awesome-icon  :icon="['fas', 'wind']" color="white" class="stackIcons text-2xl lg:text-3xl lg:-ml-1 mb-3 p-1 hover:p-2 rounded-lg " />
-              <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Tailwind Css </span> <br/> Tailwind, its a 'breeze' in styling CSS. This is a CSS framework that combine both HTML and CSS to make good UI designs. It provide responsive class and its highly flexible</p>
-            </div>
+            <div class="stackContainer mb-6 ">
 
+              <div class=" flex mt-3 ">
+                <font-awesome-icon  :icon="['fab', 'node-js']"  color="white" class="stackIcons text-3xl lg:text-3xl lg:-ml-1 p-1 hover:p-2  rounded-lg " />
+                <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Node Js </span> <br/> 
+                  This is a powerful tool for server-side/back-end development, it is used for building efficient, scalable network applications. </p>
+              </div>
+              <hr class="hr ml-3 -mt-7 lg:-mt-2 w-fit h-20">
 
-            <div class="flex flex-col space-y-4 mt-6">
-              <div class="mx-auto px-2 py-1 rounded-lg bg-blue-200 text-blue-900">
-                <h2 class="font-salsa text-base lg:text-lg ">Others</h2>
+              <div class=" flex mt-4 ">
+                <font-awesome-icon :icon="['fab', 'envira']" color="white" class="stackIcons text-3xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg " />
+                <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Mongo DB</span> <br/>This is a development platform from Google which handles the backend of mobile and web apps. It offers built-in security for your data and it is easy to integrate.</p>
+
+              </div>
+              <hr class="hr ml-3 -mt-6 lg:-mt-2 w-fit h-20">
+              
+              <div class=" flex mt-4 ">
+                <p color="white" class="ex text-xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg ">EX</p>
+                <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Express Js</span> <br/>
+                  A node-Js web application framework that provides a robust set of features to develop web and mobile apps, 
+                  designed to make building web apps and APIs simpler and more efficient.
+                </p>
+              </div>
+              <hr class="hr ml-3 -mt-6 lg:-mt-2 w-fit h-20">
+
+              <div class=" flex mt-3 ">
+                <font-awesome-icon  :icon="['fab', 'vuejs']"  color="white" class="stackIcons text-3xl lg:text-3xl lg:-ml-1 p-1 hover:p-2  rounded-lg " />
+                <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Vue Js 3</span> <br/> A progressive framework which leverage on HTML, CSS and JavaScript. Its based on what the UI looks like and handles updating efficiently when data changes.</p>
+              </div>
+              <hr class="hr ml-3 -mt-6 lg:-mt-2 w-fit h-20">
+             
+              <div class=" flex mt-4 ">
+                <p color="white" class="ex text-xl lg:text-3xl lg:-ml-1 p-1 hover:p-2 rounded-lg ">EJS</p>
+                <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">EJS</span> <br/>
+                  Embedded JavaScript (EJS) is a template engine for Node.js.It's used to generate HTML with plain JavaScript, 
+                  making it easier to create dynamic pages in web apps.
+                </p>
+              </div>
+              
+              <hr class="hr ml-3 -mt-7 lg:-mt-2 w-fit h-20">
+              <div class=" flex mt-4 ">
+                <font-awesome-icon  :icon="['fas', 'wind']" color="white" class="stackIcons text-3xl lg:text-3xl lg:-ml-1 mb-3 p-1 hover:p-2 rounded-lg " />
+                <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Tailwind Css </span> <br/> Tailwind, its a 'breeze' in styling CSS. This is a CSS framework that combine both HTML and CSS to make good UI designs. It provide responsive class and its highly flexible</p>
               </div>
 
-              <div class="flex flex-row justify-evenly text-center text-base lg:text-lg">
-                <div class="flex flex-col h-24 w-20 border-2 border-blue-300 rounded-xl">
-                  <font-awesome-icon  :icon="['fab', 'html5']"  color="white" class="stackIcons text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit" />
-                  <p class="mx-auto">HTML 5</p>
+
+              <div class="flex flex-col space-y-4 mt-6">
+                <div class="mx-auto px-2 py-1 rounded-lg bg-blue-200 text-blue-900">
+                  <h2 class="font-salsa text-base lg:text-lg ">Others</h2>
                 </div>
-                <div class="flex flex-col h-24 w-20 border-2 border-blue-300 rounded-xl">
-                  <font-awesome-icon  :icon="['fab', 'css3-alt']" color="white" class="stackIcons  text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit " />
-                  <p class="mx-auto">CSS 3</p>
-                </div>
-                <div class="flex flex-col h-24 w-20  border-2 border-blue-300 rounded-xl">
-                  <font-awesome-icon  :icon="['fab', 'js']"  color="white" class="stackIcons text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit " />
-                  <p class="mx-auto">JS</p>
+
+                <div class="flex flex-row flex-wrap justify-evenly text-center text-base lg:text-lg">
+                  
+                  <div class="flex flex-col m-2  h-24 w-20 border-2 border-blue-300 rounded-xl">
+                    <font-awesome-icon  :icon="['fab', 'html5']"  color="white" class="stackIcons text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit" />
+                    <p class="mx-auto">HTML 5</p>
+                  </div>
+                  <div class="flex flex-col m-2  h-24 w-20 border-2 border-blue-300 rounded-xl">
+                    <font-awesome-icon  :icon="['fab', 'css3-alt']" color="white" class="stackIcons  text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit " />
+                    <p class="mx-auto">CSS 3</p>
+                  </div>
+                  <div class="flex flex-col m-2 h-24 w-20  border-2 border-blue-300 rounded-xl">
+                    <font-awesome-icon  :icon="['fab', 'js']"  color="white" class="stackIcons text-4xl m-auto p-1 hover:p-2 rounded-lg w-fit " />
+                    <p class="mx-auto">JS</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          
 
 
           <!-- Recent project section -->
@@ -154,52 +189,229 @@
             </div>
           </div>
 
-          <div class="card flex items-center justify-center">
+          <!-- mtcvtu -->
+          <div class="card flex items-center justify-center md:mx-10 lg:mx-20  ">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="mtcvtuPic" src="/mtcvtu.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">M</span>TCVTU</h1></template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Mobile Network Data Website (E-commerce)</p> </template>
+                  <template #content>
+                      <p class="m-0 font-salsa text-xs lg:text-base">
+                          MTCVTU is a mobile network data business website where users make purchases of mobile data of any kind, airtime, pay electricity bills, 
+                          cableTV subscriptions as well as students exam result checking scratchcards.<br>
+                          The website is equiped with user wallet system for users to keep for future transactions. 
+                          The website is also equiped with a payment gateway which creates unique bank account details which is linked directly to user's wallet for users
+                           to make transfers to for wallet funding.<br>
+                          The website has a reward system that rewards users on each transactions they make on data purchases, this rewards can be withdrawn directly into their wallets
+                          when the requires number of transaction is met and be used to make purchases on the system as well.
+                      </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">Contract.</p>
+                  </template>
+                  <template #footer>
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://mtcvtu.com.ng" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                      
+                      <a href="https://youtu.be/ZTY_27HtLto" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
+                  </template>
+              </Card>
+          </div>
+          <!-- Knoor Kitchen -->
+          <div class="card flex items-center justify-center md:mx-10 lg:mx-20  ">
               <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
                   <template #header>
                       <img alt="knoorPic" :src="knoor" class="rounded-lg mx-auto" />
                   </template>
                   <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">K</span>noor <span class="text-orange-500 text-2xl lg:text-3xl">K</span>itchen</h1> </template>
-                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Food Vendor Website</p> </template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Food Vendor Website (E-commerce)</p> </template>
                   <template #content>
                       <p class="m-0 font-salsa text-xs lg:text-base">
                           Knoor Kitchen is a food vendor website. It is a platform where people can order delicacy of their choice and have it deliver to their doorstep.<br>
                           On it, users are able to create orders, and with payment gateway on it they can make online payment for their order and as well keep track of such order.
                       </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">Contract.</p>
                   </template>
                   <template #footer>
-                    <a href="https://twain97.github.io/knoor/">
-                      <Button icon="pi pi-globe" label="Visit Knoor Kitchen" class="myButton" 
-                      :pt="{ 
-                        root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
-                      }"/>
-                    </a>
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://twain97.github.io/knoor/" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                      
+                      <a href="https://youtu.be/JwYOEChhzWs" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
                   </template>
               </Card>
           </div>
-          <div class="card mt-4 flex items-center justify-center">
+
+             <!-- FPA E-EXAM -->
+            <div class="card mt-4 flex items-center justify-center md:mx-10 lg:mx-20  ">
               <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
                   <template #header>
-                      <img alt="E-map" src="/E-map.png" class="rounded-lg mx-auto" />
+                      <img alt="fpaExam" src="/e-exam.png" class="rounded-lg mx-auto" />
                   </template>
-                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">E-map</span></h1> </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">F</span>pa <span class="text-orange-500 text-2xl lg:text-3xl">E</span>-exam</h1> </template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">CBT Exam with Facial Recognition System</p> </template>
+                  <template #content>
+                    <p class="m-0 font-salsa text-xs lg:text-base">
+                      Fpa E-exam is a CBT Exam system equipped with Facial Recognition System of a trained machine learning model developed with TensorFlowJS.<br>
+                      The system allows students/exam takers to register on the system after which a date will be communicated to them for face capturing.<br>
+                      After Face has been detected, students/exam takers are to provide the last 4 digits of their matric number as extra security measures. Students can also login manually in case of error in face detection.
+                    </p>
+                    
+                    <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">My Final Year Project.</p>
+                  </template>
+                  <template #footer>
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://twain97.github.io/FPA-E-EXAM/#/" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                      
+                      <a href="https://youtu.be/hJWbNDfPcsE" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
+                  </template>
+              </Card>
+          </div>
+
+
+          <!-- Fpa map -->
+          <div class="card mt-4 flex items-center justify-center md:mx-10 lg:mx-20  ">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="fpa map" src="/Fpa-e-map.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">F</span>pa <span class="text-orange-500 text-2xl lg:text-3xl">M</span>ap</h1> </template>
                   <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Federal Polytechnic Ado school Map.</p> </template>
                   <template #content>
                       <p class="m-0 font-salsa text-xs lg:text-base">
-                          E-map is a detailed map of Federal Polytechnic Ado Ekiti.<br>
+                          Fpa Map is a detailed map of Federal Polytechnic Ado Ekiti.<br>
                           This map is designed to aid the students, lecturers as well as visitors to locate their destinations and well as key buildings in and around the school.
                       </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">FALOPE ABIGAIL OLUWADAMILOLA (Contract)<br>final year project</p>
                   </template>
-                  <template #footer>
-                    <a href="https://twain97.github.io/introToMap/">
-                      <Button icon="pi pi-globe" label="Visit E-MAP" class="myButton" 
-                      :pt="{ 
-                        root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
-                      }"/>
-                    </a>
+                  <template #footer >
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://twain97.github.io/introToMap/" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+
+                      <a href="https://youtu.be/2jfNwQPziX8" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
                   </template>
               </Card>
           </div>
+
+          <!-- Digital Compendium -->
+          <div class="card mt-4 flex items-center justify-center md:mx-10 lg:mx-20  ">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="digitalCompendium" src="/digital.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">D</span>igital <span class="text-orange-500 text-2xl lg:text-3xl">C</span>ompedium</h1></template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Digital Compedium of Religious Center In Ekiti.</p> </template>
+                  <template #content>
+                      <p class="m-0 font-salsa text-xs lg:text-base">
+                         This is a detailed Compedium of Religous centers in Ekiti.
+                          The website holds the details of religous center in the state, their history, locations, events and programs. <br>
+                          New centers are able to CREATE an account, UPLOAD and UPDATE their history, locations, events as well as DELETE them.
+                          The Admin has the ability to approve any compendium uploaded before it can be viewed by the visitors on the website and other users.
+                      </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">ASHAOLU SUNDAY (Contract)<br>final year project</p>
+                  </template>
+                  <template #footer >
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://religion-centre.vercel.app" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+
+                      <a href="https://youtu.be/YbAlkZP--Yg" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
+                  </template>
+              </Card>
+          </div>
+
+          <!-- Hospital management System -->
+          <div class="card mt-4 flex items-center justify-center md:mx-10 lg:mx-20  ">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="HMS" src="/hospital.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">H</span>ospital <span class="text-orange-500 text-2xl lg:text-3xl">M</span> anagement<span class="text-orange-500 text-2xl lg:text-3xl">S</span>ystem</h1> </template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">System For Hospital To Manage Appointments.</p> </template>
+                  <template #content>
+                      <p class="m-0 font-salsa text-xs lg:text-base">
+                          Hospital Management System.<br>
+                          This is a functional system developed to make Doctor to Patient interactions easier and flexible.<br>
+                          With the system, Patients can now Create an account, book Appointments, select their desired availale docts, view their appointments history, Doctors can also view their appointments with patients <br> 
+                          Only Approved Appointemts by the ADMIN can be viewed by the patients else it will display 'pending'
+                      </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">AKANMU BABATUNDE MICHAEL (Contract)<br>final year project</p>
+                  </template>
+                  <template #footer >
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://hospital-management-system-neon.vercel.app/" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+
+                      <a href="#" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
+                  </template>
+              </Card>
+          </div>
+
+          
+
 
 
           <!-- service offered section -->
@@ -218,11 +430,12 @@
                 <h2 class="font-salsa text-center ">Available for:</h2>
               </div>
               <ul class="space-y-4 py-4 text-sm md:space-y-8">
-                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Web Development Role.</li>
-                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Implementation of Authentication/Database for Websites.</li>
+                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Back-end Development Role.</li>
+                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Front-end Development Role.</li>
+                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Full-stack Development Role.</li>
+                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Implementation of Authentication For Websites</li>
+                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Develop & Implement Database for Websites.</li>
                 <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Peronal Tutor.</li>
-
-                <li><font-awesome-icon :icon="['fa', 'angles-right']" class="mr-2"/>Graphics Design.</li>
               </ul>
             </div>
           </div>
@@ -246,7 +459,7 @@
             </div>
           </div>
 
-          <div id="contactMe" class=" mx-auto w-full text-base rounded-lg pt-2 px-2 md:flex md:flex-row" style="background-color:rgb(37, 55, 82);">
+          <div id="contactMe" class="md:px-10 lg:px-20   mx-auto w-full text-base rounded-lg pt-2 px-2 md:flex md:flex-row" style="background-color:rgb(37, 55, 82);">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.777833453944!2d5.300224574088412!3d7.599140909731721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1047e5e70c1d8b79%3A0xb5274cb005995a8e!2sFederal%20Polytechnic%20Ado%20Ekiti!5e0!3m2!1sen!2sng!4v1706490727535!5m2!1sen!2sng" 
             class="w-full h-44 rounded-xl mb-4" style="border:4;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
@@ -271,7 +484,7 @@
           </div>
 
             <!-- contact me (map and send email section) -->
-          <div id="contactMe" class=" mx-auto mt-4 w-full text-sm lg:text-base rounded-lg pt-2 px-2 md:flex md:flex-row" style="background-color:rgb(37, 55, 82);">
+          <div id="contactMe" class="md:px-10 lg:px-20   mx-auto mt-4 w-full text-sm lg:text-base rounded-lg pt-2 px-2 md:flex md:flex-row" style="background-color:rgb(37, 55, 82);">
             <form class="w-full mx-auto my-4 text-sm space-y-2  md:ml-5 overflow-ellipsis">
               <p class="text-sm lg:text-lg mb-4 font-serif">If you have any project or need help.<br class="md:hidden"/> Contact me</p>
               <div class="flex flex-row space-x-2 ">
@@ -387,6 +600,7 @@ const onReply = () => {
       setDoc(doc(db, 'myProjectUsers', store.state.user.uid ), {Comment : comment.value, }, { merge:true}),
       toast.add({ severity: 'success', summary: 'Success Message', detail: 'Comment sent successfully', life: 3000 });
       visible.value = false;
+      
     }else{
       toast.add({ severity: 'error', summary: 'Empty Input', detail: 'Please fill in the input!', life: 3000 });
       // alert("Empty")
@@ -455,10 +669,12 @@ setTimeout(() => {
 
 hr{
   border: 2px solid rgb(68, 95, 131) ;
+  
 }
 .hr{
   border-right: 2px  solid rgb(104, 135, 175);
   border-left: 0px;
+  margin-left:17px;
 }
 .about{
   border:2px solid rgb(68, 95, 131);
@@ -496,7 +712,11 @@ hr{
 
 .stackIcons{
   color:rgb(194, 208, 233);
-  border:2px solid rgb(104, 135, 175);
+  border-top:2px solid rgb(104, 135, 175);
+}
+.ex{
+  color:rgb(194, 208, 233);
+  border-top:2px solid rgb(104, 135, 175);
 }
 
 .myButton:focus {

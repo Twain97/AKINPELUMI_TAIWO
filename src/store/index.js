@@ -46,8 +46,8 @@ const store = createStore({
             {   
                 photo:client3,
                 name:"Mr Twain ",
-                job:"Owner of MTCVTU.com", 
-                comment:"The Authentication and Database you implemeted on my website has been working great with no glitches.  "
+                job:"Owner of MTCVTU.com.ng", 
+                comment:"Thank you for designing my data website, you did a fine job. I look forward to working more with you."
             },  
             {
                 photo:client2,

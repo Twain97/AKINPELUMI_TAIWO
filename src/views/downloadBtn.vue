@@ -40,7 +40,7 @@ import {saveAs} from 'file-saver';
 
 
 const storage = getStorage()
-const starsRef = ref(storage, 'gs://vstore-bb580.appspot.com/Akinpelumi Taiwo CV.pdf');
+const starsRef = ref(storage, 'gs://vstore-bb580.appspot.com/AKINPELUMI TAIWO SAMUEL (Main CV).pdf');
 
 export default{
     data(){

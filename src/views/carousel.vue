@@ -22,7 +22,7 @@
       </template>
     </carousel>
 
-    <carousel :items-to-show="1"  class="hidden md:block z-30 md:w-2/3 mx-auto bg-inherit transition-all ease-in-out delay-300" 
+    <carousel :items-to-show="1"  class="hidden md:block z-30 md:w-2/4 mx-auto bg-inherit transition-all ease-in-out delay-300" 
      :autoplay="7000" :wrap-around="true" >
       <slide v-for="slide in serviceData" :key="slide" class=" border-red-500">
         <div id="Carousel" class="md:h-80 mx-2 w-80 overflow-hidden relative text-base lg:text-lg rounded-lg" style="background-color:rgb(37, 55, 82);">
