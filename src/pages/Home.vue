@@ -8,23 +8,23 @@
           content:{class:'-ml-2'},
           
         }">
-            <template #message>
-                <div class="w-full m-auto relative flex flex-col items-start rounded-lg pl-4  flex-1 border-l-8 border-slate-700 ">
-                    <div class="flex -ml-4 w-full md:w-70 font-salsa">
-                        <Avatar :image="logo" shape="circle" class="w-10 h-10" />
-                        <span class="ml-0 md:ml-10  my-auto font-bold text-slate-800">Akinpelumi Taiwo</span>
-                    </div>
-                    <div class="font-semibold text-base h-fit md:text-lg text-slate-600 my-3  w-full">
-                      <form class="bg-transparent outline-none text-xs md:text-sm w-full">
-                        <p class="text-900">For improvement purpose, please drop a review about this project</p>
-                        <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 border border-slate-600 rounded-lg pt-1  text-black w-full resize-none outline-none h-20 indent-2 bg-transparent"></textarea>
-                      </form>
-                    </div>
-                    <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
-                </div>
-            </template>
-        </Toast>
-    </div>
+          <template #message>
+              <div class="w-full m-auto relative flex flex-col items-start rounded-lg pl-4  flex-1 border-l-8 border-slate-700 ">
+                  <div class="flex -ml-4 w-full md:w-70 font-salsa">
+                      <Avatar :image="logo" shape="circle" class="w-10 h-10" />
+                      <span class="ml-0 md:ml-10  my-auto font-bold text-slate-800">Akinpelumi Taiwo</span>
+                  </div>
+                  <div class="font-semibold text-base h-fit md:text-lg text-slate-600 my-3  w-full">
+                    <form class="bg-transparent outline-none text-xs md:text-sm w-full">
+                      <p class="text-900">For improvement purpose, please drop a review about this project</p>
+                      <textarea v-model.trim="comment" placeholder="Drop review here" class="mt-1 border-y-2 border-x border-slate-600 rounded-lg pt-1  text-black w-full resize-none outline-none h-20 indent-2 bg-transparent"></textarea>
+                    </form>
+                  </div>
+                  <Button class="px-4 py-2 text-xs lg:text-base text-slate-50 bg-blue-950 outline-none border-0 active:outline-none active:border-0" label="Drop Comment" @click="onReply()"></Button>
+              </div>
+          </template>
+      </Toast>
+  </div>
 
 
     
@@ -72,7 +72,7 @@
           <div class="texts z-30 flex flex-col -mt-1  mx-auto md:my-auto  border-white md:w-fit md:-mr-20 transition-all ease-in-out">
             <div class=" text-center text-slate-50">
               <h1 class="mx-6 text-3xl lg:text-4xl font-serif">Hi! I'm <br> Akinpelumi Taiwo</h1>
-              <p  class="mt-2 text-xs xl:text-base text-slate-400 font-salsa">VueJs/Firebase Web developer.</p>
+              <p  class="mt-2 text-xs xl:text-base text-slate-400 font-salsa">NodeJs/VueJs Full Stack Web developer.</p>
             </div>
 
             <DownloadBtn/>
