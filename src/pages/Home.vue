@@ -744,17 +744,20 @@ hr{
   position: relative;
   margin: 30px auto;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 100px;
+  -webkit-animation:buttonAnimate 3.5s linear infinite;
+  animation: buttonAnimate 3.5s linear infinite;
 }
+/*
 #downloadBtn::before{
   content: "";
   position: absolute;
-  /* border:2px solid blue; */
+  /* border:2px solid blue; 
   top: 10%;
   left: -10%;
   width: 120%;
   height: 80%; 
-  /* transform: rotate(15deg); */
+  /* transform: rotate(15deg); 
   -webkit-animation:round 4500ms linear infinite;
   animation: round 4500ms linear infinite;
   background: linear-gradient(
@@ -774,13 +777,13 @@ hr{
   align-items:center;
   width: 97%;
   height: 90%;
-  /* border:2px solid green; */
+  border:2px solid green;
   left: 1.5%;
   top: 5%;
   border-radius:20px;
   background-color: rgb(68, 95, 131);
   cursor:pointer;
-}
+}*/
 
 @keyframes round {
   from {
