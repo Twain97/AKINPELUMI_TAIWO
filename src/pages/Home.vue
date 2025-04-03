@@ -746,7 +746,7 @@ hr{
   overflow: hidden;
   border-radius: 20px;
 }
-#downloadBtn:before{
+#downloadBtn::before{
   content: "";
   position: absolute;
   /* border:2px solid blue; */
@@ -763,7 +763,7 @@ hr{
     rgb(175, 193, 218) 25%
   );
 }
-#downloadBtn:after{
+#downloadBtn::after{
   padding:4px 5px;
   content: "DOWNLOAD MY CV";
   font-family:"young serif";
