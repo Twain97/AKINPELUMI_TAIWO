@@ -1,5 +1,5 @@
 <template>
-   <div class="downloadButton rounded-full mt-5 mx-auto text-slate-50 hover:bg-slate-50 hover:text-slate-700 hover:transition-all ">
+   <div @click="downloadPdf()" id="downloadBtn" >
     <div class=" flex justify-center ">
         <Toast position="top-center" group="headless" class="w-wd9 md:w-wd5 lg:w-wd3 xl:w-wd4" @close="visible = false">
             <template #container="{ message}">
@@ -24,9 +24,10 @@
     
     
     
-        <div @click="downloadPdf()" class="text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm lg:text-lg">
+        <div id="btn" class=" text-xs space-x-3 py-3 px-4  flex flex-row md:text-sm lg:text-base
+         cursor-pointer rounded-full transition-all duration-500 ease-in-out hover:border-8 hover:border-blue-200  ">
             <font-awesome-icon :icon="['fas', 'download']" class="text-lg m-auto"/>
-            <p class="m-auto font-serif">Get my Resume</p>
+            <p class="m-auto font-serif">DOWNLOAD MY CV</p>
         </div>
     </div>
 </template>
@@ -40,7 +41,7 @@ import {saveAs} from 'file-saver';
 
 
 const storage = getStorage()
-const starsRef = ref(storage, 'gs://vstore-bb580.appspot.com/AKINPELUMI TAIWO SAMUEL (Main CV).pdf');
+const starsRef = ref(storage, 'gs://vstore-bb580.appspot.com/Akinpelumi Taiwo CV.pdf');
 
 export default{
     data(){
@@ -112,7 +113,7 @@ export default{
                  // before proceeding make sure you enable the cors on cloud console
                 axios.get(this.getlink, {responseType: 'blob'})
                     .then(response => {
-                    saveAs(response.data, 'Akinpelumi Taiwo resume.pdf');
+                    saveAs(response.data, 'Akinpelumi Taiwo CV.pdf');
                 })
                 setTimeout(()=>{
                     this.close()

@@ -58,12 +58,12 @@
               </a>
             </div>
             <div class="socialIcons absolute z-50 right-4 top-28">
-              <a href="https://facebook.com/profile.php?id=100067288329413">
+              <a href="https://facebook.com/SammyTwain97">
                 <font-awesome-icon :icon="['fab', 'facebook']"  color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
               </a>
             </div>
             <div class="socialIcons absolute z-50 right-14 top-40">
-              <a href="www.linkedin.com/in/akinpelumi-taiwo-67a679232">
+              <a href="https://linkedin.com/in/akinpelumi-taiwo-samuel" target="_blank">
                 <font-awesome-icon :icon="['fab', 'linkedin']"  color="white" class="icon p-1 hover:p-2 transition-all rounded-lg " />
               </a>
             </div>
@@ -105,7 +105,7 @@
               I also have interests in graphic design using Photoshop and Canva which I combine with my web development skills to make the things I build dynamic and user friendly websites.
               In addition, I am proficient with Microsoft Packages(Excel, MS Word and so on) which helps in keeping and managing data and records. 
             </p>
-            <div class="px-4 font-salsa w-fit text-sm  lg:text-base py-2 rounded-xl mt-10 mb-6 border-2 border-gray-400">
+            <div class="px-4 font-salsa w-fit text-sm  lg:text-base py-2 rounded-xl mt-10 mb-6 border-t-2 border-b-2 border-gray-400">
               <p>My Stack <font-awesome-icon :icon="['fas', 'code']" size="lg" class=" m-auto ml-4"/> </p>
             </div>
 
@@ -114,7 +114,7 @@
               <div class=" flex mt-3 ">
                 <font-awesome-icon  :icon="['fab', 'node-js']"  color="white" class="stackIcons text-3xl lg:text-3xl lg:-ml-1 p-1 hover:p-2  rounded-lg " />
                 <p class="ml-3 text-xs  md:text-sm lg:text-base"> <span class="text-xl lg:text-2xl font-serif">Node Js </span> <br/> 
-                  This is a powerful tool for server-side/back-end development, it is used for building efficient, scalable network applications. </p>
+                  A powerful tool for server-side/back-end development, it is used for building efficient, scalable network applications. </p>
               </div>
               <hr class="hr ml-3 -mt-7 lg:-mt-2 w-fit h-20">
 
@@ -684,22 +684,25 @@ hr{
   background-image: linear-gradient(to bottom right, rgb(31,41, 55 ), rgb(52, 81, 124));
 }
 .circle{
-  border-right: 3px solid rgb(68, 95, 131);
-  border-top: 3px solid rgb(68, 95, 131);
+  border-right: 3px solid rgb(147, 169, 199);
+  /* border-right: 3px solid red; */
+  border-top: 3px solid rgb(147, 169, 199);
   -webkit-animation: spin 5.5s linear infinite;
   animation: spin 6.1s linear infinite;
 }
 .circleOut{
-  border-right: 0.5px solid rgb(68, 95, 131);
-  border-top: 0.5px solid rgb(68, 95, 131);
-  -webkit-animation: spin 6.5s linear infinite;
-  animation: spin 7.5s linear infinite;
+  border-right: 1px solid rgb(147, 169, 199);
+  /* border-right: 3px solid green; */
+  border-top: 1px solid rgb(147, 169, 199);
+  -webkit-animation: spin-in 6.5s linear infinite;
+  animation: spin-in 7.5s linear infinite;
 }
 .circleIn{
-  border-right: 0.5px solid rgb(68, 95, 131);
-  border-top: 0.5px solid rgb(68, 95, 131);
-  -webkit-animation: spin 4.5s linear infinite;
-  animation: spin 4.4s linear infinite;
+  border-right: 1px solid rgb(147, 169, 199);
+  /* border-right: 3px solid yellow; */
+  border-top: 1px solid rgb(147, 169, 199);
+  -webkit-animation: spin-in 3.5s linear infinite;
+  animation: spin-in 3.4s linear infinite;
 }
  .icon{
   color:rgb(194, 208, 233);
@@ -737,9 +740,75 @@ hr{
     border-left:3px solid rgb(68, 95, 131);
     border-bottom: 1px solid rgb(68, 95, 131);
 }
+#downloadBtn{
+  position: relative;
+  margin: 30px auto;
+  /* width: 32%;
+  height: 80vh; */
+  /* border:2px solid red; */
+  overflow: hidden;
+  border-radius: 20px;
+  /* position:relative;
+  -webkit-animation: buttonAnimate 2.5s linear infinite;
+  animation: buttonAnimate 2.5s linear infinite; */
+}
+#downloadBtn:before{
+  content: "";
+  position: absolute;
+  /* border:2px solid blue; */
+  top: 10%;
+  left: -10%;
+  width: 120%;
+  height: 80%; 
+  /* transform: rotate(15deg); */
+  animation: round 4500ms linear infinite;
+  background: linear-gradient(
+    rgb(175, 193, 218)25%,
+    rgb(11, 2, 17),
+    rgb(175, 193, 218) 25%
+  );
+}
+#downloadBtn:after{
+  padding:4px 5px;
+  content: "DOWNLOAD MY CV";
+  font-family:"young serif";
+  font-weight:500;
+  position: absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 97%;
+  height: 90%;
+  /* border:2px solid green; */
+  left: 1.5%;
+  top: 5%;
+  border-radius:20px;
+  background-color: rgb(68, 95, 131);
+  cursor:pointer;
+}
 
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+@keyframes spin-in {
+  0% { 
+    transform: rotate(0deg);
+   }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes buttonAnimate{
+  0% { border:1px solid rgb(68, 95, 131); }
+  50% { border:3px solid rgb(147, 169, 199); }
+  100% { border:1px solid rgb(68, 95, 131);}
 }
 </style>
