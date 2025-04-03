@@ -743,14 +743,8 @@ hr{
 #downloadBtn{
   position: relative;
   margin: 30px auto;
-  /* width: 32%;
-  height: 80vh; */
-  /* border:2px solid red; */
   overflow: hidden;
   border-radius: 20px;
-  /* position:relative;
-  -webkit-animation: buttonAnimate 2.5s linear infinite;
-  animation: buttonAnimate 2.5s linear infinite; */
 }
 #downloadBtn:before{
   content: "";
@@ -761,6 +755,7 @@ hr{
   width: 120%;
   height: 80%; 
   /* transform: rotate(15deg); */
+  -webkit-animation:round 4500ms linear infinite;
   animation: round 4500ms linear infinite;
   background: linear-gradient(
     rgb(175, 193, 218)25%,
