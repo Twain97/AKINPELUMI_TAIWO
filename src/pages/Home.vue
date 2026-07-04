@@ -189,8 +189,80 @@
             </div>
           </div>
 
+          
+          <!-- MTC-Studio -->
+          <div class="card flex items-center justify-center mb-5 md:mx-10 lg:mx-20  ">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="mtcstudio.img" src="/mtcstudio.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">M</span>TC <span class="text-orange-500 text-2xl lg:text-3xl">S</span>tudio</h1></template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Photography and Videography Studio.</p> </template>
+                  <template #content>
+                      <p class="m-0 font-salsa text-xs lg:text-base">
+                          MTC Studio is a photography and videography studio website where users can book for photoshoot and video shoot sessions.<br>
+                      </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">Contract.</p>
+                  </template>
+                  <template #footer>
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://studio.mtc9ja.com/" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                      
+                      <a href="#" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
+                  </template>
+              </Card>
+          </div>
+
+
+          <!-- Grace Villasng -->
+           <div class="card flex items-center justify-center mb-5 md:mx-10 lg:mx-20  ">
+              <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
+                  <template #header>
+                      <img alt="gracevillas.img" src="/gracevillas.png" class="rounded-lg mx-auto" />
+                  </template>
+                  <template #title> <h1 class="font-lemon text-base lg:text-lg"><span class="text-orange-500 text-2xl lg:text-3xl">G</span>race <span class="text-orange-500 text-2xl lg:text-3xl">V</span>illas</h1></template>
+                  <template #subtitle> <p class="text-slate-400  text-xs md:text-sm font-salsa lg:text-base">Luxury Vacation and Stay Apartment (Airbnb)</p> </template>
+                  <template #content>
+                      <p class="m-0 font-salsa text-xs lg:text-base">
+                          Grace Villas is a luxury vacation rental apartment for travelers and holiday visits/stay.<br>
+                          The website allows users to browse and book premium accommodations for their stay, layovers or trips, with features like detailed map for seamless location of the apartment, property descriptions, high-quality images, and seamless booking processes.
+                      </p>
+                      <p class="text-right mt-10 text-blue-300 text-xs md:text-sm">Contract.</p>
+                  </template>
+                  <template #footer>
+                    <div class="w-full flex justify-between border-red-500">
+                      <a href="https://gracevillasng.com/" target="_blank">
+                        <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                      
+                      <a href="#" target="_blank">
+                        <Button icon="pi pi-youtube" label="Watch Demo Video" class="myButton" 
+                        :pt="{ 
+                          root: { class: 'bg-orange-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
+                        }"/>
+                      </a>
+                    </div>
+                  </template>
+              </Card>
+          </div>
+
+
           <!-- mtcvtu -->
-          <div class="card flex items-center justify-center md:mx-10 lg:mx-20  ">
+          <div class="card flex items-center justify-center mb-5 md:mx-10 lg:mx-20  ">
               <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
                   <template #header>
                       <img alt="mtcvtuPic" src="/mtcvtu.png" class="rounded-lg mx-auto" />
@@ -228,8 +300,10 @@
                   </template>
               </Card>
           </div>
+
+
           <!-- Knoor Kitchen -->
-          <div class="card flex items-center justify-center md:mx-10 lg:mx-20  ">
+          <div class="card flex items-center justify-center  md:mx-10 lg:mx-20  ">
               <Card id="card" style=" background-color:rgb(37, 55, 82)" class="rounded-lg w-full overflow-hidden text-white pt-4 px-2">
                   <template #header>
                       <img alt="knoorPic" :src="knoor" class="rounded-lg mx-auto" />

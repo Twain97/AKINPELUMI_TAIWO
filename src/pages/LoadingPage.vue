@@ -32,7 +32,7 @@ onMounted(() => {
     
    store.state.signedIn = true
    
-  },5000);
+  },1500);
 
   
 })
