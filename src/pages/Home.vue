@@ -283,7 +283,7 @@
                   </template>
                   <template #footer>
                     <div class="w-full flex justify-between border-red-500">
-                      <a href="https://mtcvtu.com.ng" target="_blank">
+                      <a href="https://vtu.mtc9ja.com" target="_blank">
                         <Button icon="pi pi-globe" label="Visit Site" class="myButton" 
                         :pt="{ 
                           root: { class: 'bg-indigo-600 border-white px-4 py-2 text-xs md:text-sm mx-auto lg:text-base' } 
