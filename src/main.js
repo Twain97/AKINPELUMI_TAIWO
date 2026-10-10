@@ -29,6 +29,7 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import App from './App.vue'
 import router from './router'
+import revealDirective from './directives/reveal.js'
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 
 library.add(faUserSecret, faTwitter, faHouseChimney, faQuestionCircle
@@ -37,6 +38,7 @@ library.add(faUserSecret, faTwitter, faHouseChimney, faQuestionCircle
   faFireFlameCurved, faWind, faHtml5, faCss3Alt, faJs, faPaperPlane, faNodeJs, faEnvira )
 
 const app = createApp(App)
+app.directive('reveal', revealDirective)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
   }

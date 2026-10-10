@@ -16,7 +16,7 @@
         
       </div>
       <template #title> 
-        <div @click="scrollToHome" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto">Home </div> </div>
+        <div @click="goToHomeSection('home')" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto">Home </div> </div>
       </template>
     </el-menu-item>
     <el-menu-item index="1">
@@ -25,7 +25,7 @@
          :class="{ 'icons p-2 rounded-xl': isCollapse || !isCollapse }"/>
       </el-icon>
       <template #title> 
-        <div @click="scrollToAbout" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> About Me</div> </div>
+        <div @click="goToHomeSection('about')" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> About Me</div> </div>
       </template>
     </el-menu-item>
     <el-menu-item index="1">
@@ -34,7 +34,7 @@
          :class="{ 'icons p-2 rounded-xl': isCollapse || !isCollapse }"/>
       </el-icon>
       <template #title> 
-        <div  @click="scrollToProject" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Recent Project</div> </div>
+        <div  @click="goToProjects" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Projects</div> </div>
       </template>
     </el-menu-item>
     <el-menu-item index="1">
@@ -43,7 +43,7 @@
          :class="{ 'icons p-2 rounded-xl': isCollapse || !isCollapse }"/>
       </el-icon>
       <template #title> 
-        <div  @click="scrollToCarousel" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Service Offered</div> </div>
+        <div  @click="goToHomeSection('carousel')" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Service Offered</div> </div>
       </template>
     </el-menu-item>
     
@@ -53,53 +53,38 @@
          :class="{ 'icons p-2 rounded-xl': isCollapse || !isCollapse }"/>
       </el-icon>
       <template #title> 
-        <div @click="scrollToContact" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Contact Me <font-awesome-icon icon="angles-right" class="ml-4"/> </div></div>
+        <div @click="goToHomeSection('contact')" class="tempText ml-5 w-full h-full text-xs lg:text-base font-semibold flex"><div class="my-auto"> Contact Me <font-awesome-icon icon="angles-right" class="ml-4"/> </div></div>
       </template>
     </el-menu-item>
     </el-menu>
 </template>
 
-<script  setup>
-import { ref } from 'vue';                                                                                                                                                                                                                                                                                                                                                                                                                                         
-import {useStore} from "vuex"
+<script setup>
+import { ref, nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useStore } from 'vuex'
 
 const store = useStore()
-var toggleValue =  store.state.navToggle
+const route = useRoute()
+const router = useRouter()
+const isCollapse = ref(store.state.navToggle2)
 const size = 20
-const color = '#409EFC';
-const isCollapse = ref(toggleValue);
+const color = '#409EFC'
 
-const toggleCollapse2 = () => {
-  store.dispatch("toggle2")
+const toggleCollapse2 = () => store.dispatch('toggle2')
+
+const goToHomeSection = async (sectionId) => {
+  if (route.path !== '/') {
+    await router.push('/')
+    await nextTick()
+  }
+  document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+  toggleCollapse2()
 }
 
-const scrollToHome = () =>{ 
-  const element = document.getElementById('home');
-element.scrollIntoView({ behavior: 'smooth' });
-toggleCollapse2()
-}
-
-const scrollToCarousel = () =>{ 
-  const element = document.getElementById('carousel');
-element.scrollIntoView({ behavior: 'smooth' });
-toggleCollapse2()
-}
-const scrollToAbout = () =>{ 
-  const element = document.getElementById('about');
-element.scrollIntoView({ behavior: 'smooth' });
-toggleCollapse2()
-}
-
-const scrollToProject = () =>{ 
-  const element = document.getElementById('project');
-element.scrollIntoView({ behavior: 'smooth' });
-toggleCollapse2()
-}
-
-const scrollToContact = () =>{ 
-  const element = document.getElementById('contact');
-element.scrollIntoView({ behavior: 'smooth' });
-toggleCollapse2()
+const goToProjects = async () => {
+  await router.push('/projects')
+  toggleCollapse2()
 }
 </script>
 
